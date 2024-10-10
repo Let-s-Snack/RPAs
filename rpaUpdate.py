@@ -1,13 +1,16 @@
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 import os 
 from dotenv import load_dotenv
 
 load_dotenv()
 
 # Creating driver
-driver = webdriver.Chrome()
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+driver = webdriver.Chrome(options=chrome_options)
 
 driver.get("https://app.powerbi.com/groups/me/list?experience=power-bi")
 
