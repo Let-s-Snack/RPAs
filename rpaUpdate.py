@@ -10,26 +10,25 @@ load_dotenv()
 # Creating driver
 chrome_options = Options()
 chrome_options.add_argument("--headless")
-driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome()
 
 driver.get("https://app.powerbi.com/groups/me/list?experience=power-bi")
 
-
 # Login
-campo_email = driver.find_element(By.XPATH, "//input[@placeholder='Enter email']")
+campo_email = driver.find_element(By.XPATH, "/html/body/div/div[2]/div[2]/div/div[1]/div[2]/input")
 
 driver.execute_script(f"arguments[0].value = '{os.getenv('EMAIL')}';", campo_email)
 
 sleep(2)
-driver.find_element(By.XPATH, '//*[@id="submitBtn"]').click()
+driver.find_element(By.XPATH, '/html/body/div/div[2]/div[2]/button').click()
+
+sleep(8)
+driver.find_element(By.XPATH,'/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[3]/div/div[2]/input').send_keys(os.getenv('PWD'))
+
+driver.find_element(By.XPATH, '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[5]/div/div/div/div/input').click()
 
 sleep(3)
-driver.find_element(By.XPATH,'//*[@id="i0118"]').send_keys(os.getenv('PWD'))
-driver.find_element(By.XPATH, '//*[@id="idSIButton9"]').click()
-
-sleep(3)
-driver.find_element(By.XPATH, '//*[@id="idSIButton9"]').click()
-
+driver.find_element(By.XPATH, '/html/body/div/form/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[2]/input').click()
 
 # Updating
 sleep(15)
