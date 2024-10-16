@@ -28,6 +28,7 @@ db = client[os.getenv('NO_SQL_DB')]
 restrictions_collection = db.get_collection('Restrictions')
 ingredients_collection = db.get_collection('Ingredients')
 recipes_collection = db.get_collection('Recipes')
+adm_collection = db.get_collection('Adm')
 
 def preparation_methods(steps, id):
     step = 1
@@ -392,6 +393,24 @@ cnxn.commit()
 
 # Migration to NoSQL - MONGO
 # INSERTS e UPDATES
+
+# Admin
+admins = df_adm.to_dict('records')
+
+if admins:
+    adm_collection.insert_many(admins)
+
+df_adm = pd.read_sql(f"select email, password, is_deleted from admin a where is_updated = {True}", cnxn)
+update = {}
+for key, val in df_adm.iterrows():
+    for i, ii in val.items():
+        update[i] = ii
+
+    adm_collection.update_one(
+        {'external_id': val['external_id']},
+        {"$set":update}
+    )
+    update = {}
 
 # Restrictions
 df_restriction.columns = ['external_id', 'description', 'name', 'url_photo', 'is_deleted','creation_date']
