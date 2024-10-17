@@ -11,7 +11,7 @@ load_dotenv()
 # Creating driver
 chrome_options = Options()
 chrome_options.add_argument("--headless")
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(options=chrome_options)
 
 EMAIL = os.getenv('EMAIL')
 PWD = os.getenv('PWD')
