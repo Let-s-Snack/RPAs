@@ -4,8 +4,8 @@ Esse projeto foi criado para gerenciar os RPAs do aplicativo Let's Snack.
 
 ## Funcionalidades
 
-- Atualizar os dados cadastrais da origem para o banco de dados normalizado da 2° Série;
-- Atualizar os dados cadastrais da origem para o banco de dados MongoDB do APP Let's Snack;
+- Atualizar os dados cadastrais do banco origem para o banco de dados normalizado da 2° Série;
+- Atualizar os dados cadastrais do banco origem para o banco de dados MongoDB do APP Let's Snack;
 - Atualizar os dashboards do Let's Snack feitos em Power BI.
 
 ## Requisitos e Dependencias
