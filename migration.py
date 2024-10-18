@@ -612,8 +612,6 @@ cursor.execute(f"UPDATE recipe_restriction SET transaction_made={True} WHERE tra
 cursor.execute(f"UPDATE admin SET transaction_made={True}, is_updated={False} WHERE transaction_made={False}")
 cnxn.commit()
 
-cnxn.commit()
-
 # closing connections
 cursor.close()
 cnxn.close()
