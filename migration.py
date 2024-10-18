@@ -149,7 +149,6 @@ with engine.connect() as connection:
 
         for medition_type in df_ingredient_recipe['fk_let_medition_types_id'].unique():
             if medition_type not in df_medition_types['name'].unique():
-                print(medition_type)
                 with engine.connect() as connectionMedition:
                     query = text("INSERT INTO let_medition_types (name, creation_date) VALUES (:name, :creation_date)")
                     
@@ -184,7 +183,7 @@ with engine.connect() as connection:
             if len(delete_ids) == 1:
                 delete_ids = (delete_ids[0], )
 
-            # with engine.connect() as connection:
+            
             delete = text("DELETE FROM let_ingredients_broken_restrictions WHERE concat(pfk_let_ingredients_id::text, '-', pfk_let_restrictions_id::text) in :ids")
             
             connection.execute(delete, {'ids': delete_ids})
@@ -201,7 +200,7 @@ with engine.connect() as connection:
             if len(delete_ids) == 1:
                 delete_ids = (delete_ids[0], )
 
-            # with engine.connect() as connection:
+            
             delete = text("DELETE FROM let_recipes_ingredients WHERE CONCAT(pfk_let_ingredients_id::text,'-',pfk_let_recipes_id::text) in :ids")
             
             connection.execute(delete, {'ids': delete_ids})
@@ -217,7 +216,7 @@ with engine.connect() as connection:
             if len(delete_ids) == 1:
                 delete_ids = (delete_ids[0], )
 
-            # with engine.connect() as connection:
+            
             delete = text("DELETE FROM let_recipes_broken_restrictions WHERE concat(pfk_let_restrictions_id::text,'-',pfk_let_recipes_id::text) in :ids")
             
             connection.execute(delete, {'ids': delete_ids})
@@ -240,7 +239,7 @@ with engine.connect() as connection:
 
             setStr = setStr[:len(setStr)-1]
             
-            # with engine.connect() as connection:
+            
             update = text(f"UPDATE let_adm {setStr} WHERE email='{val['email']}'")
             
             connection.execute(update)
@@ -260,7 +259,7 @@ with engine.connect() as connection:
 
             setStr = setStr[:len(setStr)-1]
             
-            # with engine.connect() as connection:
+            
             update = text(f"UPDATE let_ingredients {setStr} WHERE pk_id={ii['id']}")
             
             connection.execute(update)
@@ -280,7 +279,7 @@ with engine.connect() as connection:
 
             setStr = setStr[:len(setStr)-1]
             
-            # with engine.connect() as connection:
+            
             update = text(f"UPDATE let_restrictions {setStr} WHERE pk_id={ii['id']}")
             
             connection.execute(update)
@@ -307,7 +306,7 @@ with engine.connect() as connection:
 
             setStr = setStr[:len(setStr)-1]
             
-            # with engine.connect() as connection:
+            
             delete = text(f"DELETE FROM let_preparation_methods WHERE fk_let_recipes_id = {id}")
             
             connection.execute(delete)
@@ -320,7 +319,7 @@ with engine.connect() as connection:
             
                 
             
-            # with engine.connect() as connection:
+            
             update = text(f"UPDATE let_recipes {setStr} WHERE pk_id={ii['id']}")
             
             connection.execute(update)
@@ -332,7 +331,7 @@ with engine.connect() as connection:
 
         for medition_type in df_measure['measure'].unique():
             if medition_type not in df_medition_types['name'].unique():
-                # with engine.connect() as connection:
+                
                 query = text("INSERT INTO let_medition_types (name, creation_date) VALUES (:name, :creation_date)")
                 
                 connection.execute(query, {'name': medition_type, 'creation_date': datetime.date.today()})
@@ -361,7 +360,7 @@ with engine.connect() as connection:
 
                 setStr = setStr[:len(setStr)-1]
 
-                # with engine.connect() as connection:
+                
                 update = text(f"UPDATE let_recipes_ingredients {setStr} WHERE CONCAT(pfk_let_ingredients_id::text,'-',pfk_let_recipes_id::text)='{ii['id']}'")
                 
                 connection.execute(update)
