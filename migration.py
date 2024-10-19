@@ -92,8 +92,6 @@ with engine.connect() as connection:
 
         df_ingredients.to_sql('let_ingredients', con=engine, if_exists='append', index=False)
 
-        
-
         # Restriction
         df_restriction = pd.read_sql(f'SELECT id, description, type, image_url, is_deleted FROM restriction WHERE transaction_made = {False}', cnxn)
 
@@ -102,8 +100,6 @@ with engine.connect() as connection:
 
         df_restriction.to_sql('let_restrictions', con=engine, if_exists='append', index=False)
 
-        
-
         # Ingredient_Restriction
         df_ingredient_restriction = pd.read_sql(f'SELECT ingredient_id, restriction_id FROM ingredient_restriction WHERE transaction_made = {False}', cnxn)
 
@@ -111,16 +107,12 @@ with engine.connect() as connection:
 
         df_ingredient_restriction.to_sql('let_ingredients_broken_restrictions', con=engine, if_exists='append', index=False)
 
-        
-
         # Recipe
         df_recipes = pd.read_sql(f'SELECT id, name, description, image_url, is_deleted FROM recipe WHERE transaction_made = {False}', cnxn)
         df_recipes.columns = ['pk_id', 'name', 'description', 'url_photo', 'is_deleted']
         df_recipes['creation_date'] = datetime.datetime.now()
 
         df_recipes.to_sql('let_recipes', con=engine, if_exists='append', index=False)
-
-        
 
         df_preparation_methods = pd.read_sql(f'SELECT id, steps FROM recipe WHERE transaction_made = {False}', cnxn)
         stepsList = []
@@ -131,8 +123,6 @@ with engine.connect() as connection:
         df_preparation_methods = pd.DataFrame(stepsList)
 
         df_preparation_methods.to_sql('let_preparation_methods', con=engine, if_exists='append', index=False)
-
-        
 
         # Ingredient_Recipe
 
@@ -154,7 +144,6 @@ with engine.connect() as connection:
                     
                     connectionMedition.execute(query, {'name': medition_type, 'creation_date': datetime.date.today()})
                     connectionMedition.commit()
-                
 
         df_medition_types = pd.read_sql("SELECT * FROM let_medition_types", engine)     
 
@@ -163,16 +152,12 @@ with engine.connect() as connection:
 
         df_ingredient_recipe.to_sql('let_recipes_ingredients', con=engine, if_exists='append', index=False)
 
-        
-
         # Recipe_Restriction
         df_recipe_restriction = pd.read_sql(f'select recipe_id, restriction_id  from recipe_restriction WHERE transaction_made = {False}', cnxn)
 
         df_recipe_restriction.columns = ['pfk_let_recipes_id', 'pfk_let_restrictions_id']
 
         df_recipe_restriction.to_sql('let_recipes_broken_restrictions', con=engine, if_exists='append', index=False)
-
-        
 
         # DELETES
         # ingredient_restriction
@@ -182,13 +167,10 @@ with engine.connect() as connection:
 
             if len(delete_ids) == 1:
                 delete_ids = (delete_ids[0], )
-
             
             delete = text("DELETE FROM let_ingredients_broken_restrictions WHERE concat(pfk_let_ingredients_id::text, '-', pfk_let_restrictions_id::text) in :ids")
             
             connection.execute(delete, {'ids': delete_ids})
-            
-
         except:
             pass
 
@@ -200,14 +182,12 @@ with engine.connect() as connection:
             if len(delete_ids) == 1:
                 delete_ids = (delete_ids[0], )
 
-            
             delete = text("DELETE FROM let_recipes_ingredients WHERE CONCAT(pfk_let_ingredients_id::text,'-',pfk_let_recipes_id::text) in :ids")
             
             connection.execute(delete, {'ids': delete_ids})
-            
         except:
             pass
-
+        
         # recipe_restriction
         try:
             delete_ids = pd.read_sql(f"select distinct concat(restriction_id,'-',recipe_id) as hash from recipe_restriction where is_deleted = {True};", cnxn)
@@ -216,12 +196,9 @@ with engine.connect() as connection:
             if len(delete_ids) == 1:
                 delete_ids = (delete_ids[0], )
 
-            
             delete = text("DELETE FROM let_recipes_broken_restrictions WHERE concat(pfk_let_restrictions_id::text,'-',pfk_let_recipes_id::text) in :ids")
             
             connection.execute(delete, {'ids': delete_ids})
-            
-
         except:
             pass
 
@@ -243,7 +220,6 @@ with engine.connect() as connection:
             update = text(f"UPDATE let_adm {setStr} WHERE email='{val['email']}'")
             
             connection.execute(update)
-            
 
         # Ingredient
         df_ingredient_update = pd.read_sql(f"select id, name, description, is_deleted from ingredient where is_updated = {True};", cnxn)
@@ -316,15 +292,10 @@ with engine.connect() as connection:
 
             df_preparation_methods.to_sql('let_preparation_methods', con=engine, if_exists='append', index=False)
 
-            
-                
-            
-            
             update = text(f"UPDATE let_recipes {setStr} WHERE pk_id={ii['id']}")
             
             connection.execute(update)
             
-
         # Ingredient_Recipe
         df_measure = pd.read_sql(f"select distinct measure from ingredient_recipe;", cnxn)
         df_medition_types = pd.read_sql('SELECT * FROM let_medition_types', engine)
@@ -336,13 +307,11 @@ with engine.connect() as connection:
                 
                 connection.execute(query, {'name': medition_type, 'creation_date': datetime.date.today()})
                 
-
         try:
             df_ingredient_recipe = pd.read_sql(f"select distinct concat(ingredient_id, '-', recipe_id) as id, measure as fk_let_medition_types_id, quantity from ingredient_recipe where is_updated = {True};", cnxn)
             
             df_ingredient_recipe_no = pd.read_sql(f"select ingredient_id, recipe_id, measure as fk_let_medition_types_id, quantity from ingredient_recipe where is_updated = {True};", cnxn)
             
-
             for key, val in df_medition_types.iterrows():
                 try:
                     df_ingredient_recipe['fk_let_medition_types_id'] = df_ingredient_recipe['fk_let_medition_types_id'].replace(val['name'], val['pk_id'])
@@ -359,13 +328,11 @@ with engine.connect() as connection:
                             setStr += f"{key}={val},"
 
                 setStr = setStr[:len(setStr)-1]
-
-                
+               
                 update = text(f"UPDATE let_recipes_ingredients {setStr} WHERE CONCAT(pfk_let_ingredients_id::text,'-',pfk_let_recipes_id::text)='{ii['id']}'")
                 
                 connection.execute(update)
                 
-
         except Exception as Ex:
             pass
 
@@ -382,10 +349,8 @@ with engine.connect() as connection:
             DELETE FROM ingredient_restriction 
             WHERE is_deleted = {True}
         """)
-
         cursor.execute(delete_query)
         
-
         delete_query = sql.SQL(f"""
             DELETE FROM recipe_restriction 
             WHERE is_deleted = {True}
@@ -622,6 +587,8 @@ with engine.connect() as connection:
         print("ERRO:", ex)
         connection.rollback()
         cnxn.rollback()
+    finally:
+        print("DATA:", datetime.datetime.now())
 
 # closing connections
 cursor.close()
