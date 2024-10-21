@@ -128,7 +128,7 @@ with engine.connect() as connection:
 
         df_medition_types = pd.read_sql('SELECT * FROM let_medition_types', engine)
 
-        df_ingredient_recipe = pd.read_sql(f"SELECT ingredient_id, recipe_id, measure, quantity FROM ingredient_recipe WHERE transaction_made={False}", cnxn)
+        df_ingredient_recipe = pd.read_sql(f"SELECT ingredient_id, recipe_id, measure, quantity FROM ingredient_recipe WHERE transaction_made={False} and quantity is not null", cnxn)
 
         df_ingredient_recipe.columns = ['pfk_let_ingredients_id', 'pfk_let_recipes_id', 'fk_let_medition_types_id', 'quantity']
 
@@ -137,13 +137,14 @@ with engine.connect() as connection:
 
         df_ingredient_recipe['creation_date'] = datetime.datetime.now()
 
-        for medition_type in df_ingredient_recipe['fk_let_medition_types_id'].unique():
-            if medition_type not in df_medition_types['name'].unique():
-                with engine.connect() as connectionMedition:
+        with engine.connect() as connectionMedition:
+            for medition_type in df_ingredient_recipe['fk_let_medition_types_id'].unique():
+                print(medition_type)
+                if medition_type not in df_medition_types['name'].unique():
                     query = text("INSERT INTO let_medition_types (name, creation_date) VALUES (:name, :creation_date)")
                     
                     connectionMedition.execute(query, {'name': medition_type, 'creation_date': datetime.date.today()})
-                    connectionMedition.commit()
+            connectionMedition.commit()
 
         df_medition_types = pd.read_sql("SELECT * FROM let_medition_types", engine)     
 
@@ -297,16 +298,8 @@ with engine.connect() as connection:
             connection.execute(update)
             
         # Ingredient_Recipe
-        df_measure = pd.read_sql(f"select distinct measure from ingredient_recipe;", cnxn)
         df_medition_types = pd.read_sql('SELECT * FROM let_medition_types', engine)
 
-        for medition_type in df_measure['measure'].unique():
-            if medition_type not in df_medition_types['name'].unique():
-                
-                query = text("INSERT INTO let_medition_types (name, creation_date) VALUES (:name, :creation_date)")
-                
-                connection.execute(query, {'name': medition_type, 'creation_date': datetime.date.today()})
-                
         try:
             df_ingredient_recipe = pd.read_sql(f"select distinct concat(ingredient_id, '-', recipe_id) as id, measure as fk_let_medition_types_id, quantity from ingredient_recipe where is_updated = {True};", cnxn)
             
