@@ -139,7 +139,6 @@ with engine.connect() as connection:
 
         with engine.connect() as connectionMedition:
             for medition_type in df_ingredient_recipe['fk_let_medition_types_id'].unique():
-                print(medition_type)
                 if medition_type not in df_medition_types['name'].unique():
                     query = text("INSERT INTO let_medition_types (name, creation_date) VALUES (:name, :creation_date)")
                     
