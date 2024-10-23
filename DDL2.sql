@@ -840,7 +840,7 @@ or DELETE ON let_coments FOR EACH ROW
 EXECUTE FUNCTION func_calculate_average_rating ();
 
 -- Fuctions
-CREATE OR REPLACE FUNCTION func_adm_verificatione(email_input varchar, pwd_input varchar)
+CREATE OR REPLACE FUNCTION func_adm_verification(email_input varchar, pwd_input varchar)
 RETURNS TABLE (
     email varchar,
     is_adm boolean
