@@ -53,7 +53,7 @@ Para executar este projeto, você precisará instalar as seguintes bibliotecas e
 
 ### Python
 
-- Python 3.8 ou superior
+- Python 3.12 ou superior
 - pandas
 - psycopg2-binary 2.9.9
 - sqlalchemy 2.0.32
@@ -78,6 +78,7 @@ Observação: Não se esqueça de criar os bancos de dados.
 ### Outras Ferramentas
 
 - Git
+- EC2 AWS
 
 ## Autores
 
