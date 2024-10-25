@@ -27,14 +27,16 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Test with coverage
-      run: coverage run -m test_connections.py
+      run: coverage run test_connections.py
 
     - name: Result
       run: coverage report
 
     - name: Deploy no EC2 - AWS
+      env:
+        AWS_KEY: ${{ secrets.AWS_KEY }}
       run: |
         echo "Conectando no EC2"
-        echo "${{secrets.AWS_KEY}" > private_key && chmod 600 private_key
+        echo "$AWS_KEY" > private_key && chmod 600 private_key
         ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-54-205-13-96.compute-1.amazonaws.com "
-              cd RPAs/;git pull;./iniciar.sh"
+              cd RPAs/; git pull; ./iniciar.sh"
