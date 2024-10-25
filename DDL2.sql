@@ -54,6 +54,8 @@ DROP TABLE IF EXISTS let_log_persons CASCADE;
 
 DROP TABLE IF EXISTS let_adm CASCADE;
 
+DROP TABLE IF EXISTS let_ia_responses CASCADE;
+
 DROP TRIGGER IF EXISTS trg_let_coments_log ON let_coments;
 
 DROP TRIGGER IF EXISTS trg_let_recipes_log ON let_recipes;
@@ -279,6 +281,15 @@ CREATE TABLE let_chats (
     is_active BOOLEAN not null,
     creation_date TIMESTAMP NOT NULL,
     CONSTRAINT idx_let_chats_fk_let_persons_id FOREIGN KEY (fk_let_persons_id) REFERENCES let_persons (pk_id)
+);
+
+create table let_ia_responses (
+    pk_id SERIAL CONSTRAINT idx_let_ia_responses_id PRIMARY KEY,
+    email VARCHAR(200) not null,
+    weight FLOAT not null,
+    height float not null,
+    response boolean not null,
+    creation_date TIMESTAMP not null default CURRENT_TIMESTAMP
 );
 
 CREATE TABLE let_chat_messages (
