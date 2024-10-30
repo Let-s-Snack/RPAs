@@ -4,8 +4,6 @@ name: Python application
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -42,11 +40,11 @@ jobs:
     - name: Result
       run: coverage report
 
-    - name: Deploy no EC2 - AWS
-      env:
-        AWS_KEY: ${{ secrets.AWS_KEY }}
-      run: |
-        echo "Conectando no EC2"
-        echo "$AWS_KEY" > private_key && chmod 600 private_key
-        ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-54-205-13-96.compute-1.amazonaws.com "
-              cd RPAs/; git pull; ./iniciar.sh"
+    # - name: Deploy no EC2 - AWS
+    #   env:
+    #     AWS_KEY: ${{ secrets.AWS_KEY }}
+    #   run: |
+    #     echo "Conectando no EC2"
+    #     echo "$AWS_KEY" > private_key && chmod 600 private_key
+    #     ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-54-205-13-96.compute-1.amazonaws.com "
+    #           cd RPAs/; git pull; ./iniciar.sh"
