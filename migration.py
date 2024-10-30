@@ -101,7 +101,7 @@ with engine.connect() as connection:
         df_restriction.to_sql('let_restrictions', con=engine, if_exists='append', index=False)
 
         # Ingredient_Restriction
-        df_ingredient_restriction = pd.read_sql(f'SELECT ingredient_id, restriction_id FROM ingredient_restriction WHERE transaction_made = {False}', cnxn)
+        df_ingredient_restriction = pd.read_sql(f'SELECT DISTINCT ingredient_id, restriction_id FROM ingredient_restriction WHERE transaction_made = {False}', cnxn)
 
         df_ingredient_restriction.columns = ['pfk_let_ingredients_id', 'pfk_let_restrictions_id']
 
@@ -159,49 +159,43 @@ with engine.connect() as connection:
 
         df_recipe_restriction.to_sql('let_recipes_broken_restrictions', con=engine, if_exists='append', index=False)
 
+        cnxn.commit()
+        connection.commit()
         # DELETES
         # ingredient_restriction
         try:
-            delete_ids = pd.read_sql(f"select distinct concat(ingredient_id , '-', restriction_id) as hash from ingredient_restriction where is_deleted = {True};", cnxn)
-            delete_ids = tuple(delete_ids['hash'].to_list())
-
-            if len(delete_ids) == 1:
-                delete_ids = (delete_ids[0], )
+            delete_ids = pd.read_sql(f"SELECT ingredient_id, restriction_id FROM ingredient_restriction WHERE is_deleted = {True};", cnxn)
             
-            delete = text("DELETE FROM let_ingredients_broken_restrictions WHERE concat(pfk_let_ingredients_id::text, '-', pfk_let_restrictions_id::text) in :ids")
-            
-            connection.execute(delete, {'ids': delete_ids})
+            for i, row in delete_ids.iterrows():
+                delete = text("DELETE FROM let_ingredients_broken_restrictions WHERE pfk_let_ingredients_id = :x AND pfk_let_restrictions_id = :y")
+                connection.execute(delete, {'x': int(row['ingredient_id']), 'y': int(row['restriction_id'])})
+                connection.commit()
         except:
             pass
 
         # ingredient_recipe
         try:
-            delete_ids = pd.read_sql(f"select distinct concat(ingredient_id, '-', recipe_id) as hash from ingredient_recipe where is_deleted = {True};", cnxn)
-            delete_ids = tuple(delete_ids['hash'].to_list())
-
-            if len(delete_ids) == 1:
-                delete_ids = (delete_ids[0], )
-
-            delete = text("DELETE FROM let_recipes_ingredients WHERE CONCAT(pfk_let_ingredients_id::text,'-',pfk_let_recipes_id::text) in :ids")
+            delete_ids = pd.read_sql(f"SELECT ingredient_id, recipe_id FROM ingredient_recipe WHERE is_deleted = {True};", cnxn)
             
-            connection.execute(delete, {'ids': delete_ids})
+            for i, row in delete_ids.iterrows():
+                delete = text("DELETE FROM let_recipes_ingredients WHERE pfk_let_ingredients_id = :x AND pfk_let_recipes_id = :y")
+                connection.execute(delete, {'x': int(row['ingredient_id']), 'y': int(row['recipe_id'])})
+                connection.commit()
         except:
             pass
-        
+
         # recipe_restriction
         try:
-            delete_ids = pd.read_sql(f"select distinct concat(restriction_id,'-',recipe_id) as hash from recipe_restriction where is_deleted = {True};", cnxn)
-            delete_ids = tuple(delete_ids['hash'].to_list())
-
-            if len(delete_ids) == 1:
-                delete_ids = (delete_ids[0], )
-
-            delete = text("DELETE FROM let_recipes_broken_restrictions WHERE concat(pfk_let_restrictions_id::text,'-',pfk_let_recipes_id::text) in :ids")
+            delete_ids = pd.read_sql(f"SELECT restriction_id, recipe_id FROM recipe_restriction WHERE is_deleted = {True};", cnxn)
             
-            connection.execute(delete, {'ids': delete_ids})
+            for i, row in delete_ids.iterrows():
+                delete = text("DELETE FROM let_recipes_broken_restrictions WHERE pfk_let_restrictions_id = :x AND pfk_let_recipes_id = :y")
+                connection.execute(delete, {'x': int(row['restriction_id']), 'y': int(row['recipe_id'])})
+                connection.commit()
         except:
+            print('ERRO 3')
             pass
-
+        
         # UPDATE
         # Admin
         df_adm_update = pd.read_sql(f"select email, password, name, is_deleted from admin where is_updated = {True};", cnxn)
@@ -235,6 +229,10 @@ with engine.connect() as connection:
 
             setStr = setStr[:len(setStr)-1]
             
+            try:
+                connection.commit()
+            except:
+                pass
             
             update = text(f"UPDATE let_ingredients {setStr} WHERE pk_id={ii['id']}")
             
@@ -298,7 +296,12 @@ with engine.connect() as connection:
             
         # Ingredient_Recipe
         df_medition_types = pd.read_sql('SELECT * FROM let_medition_types', engine)
-
+        
+        try:
+            connection.commit()
+        except Exception as ex:
+            pass
+        
         try:
             df_ingredient_recipe = pd.read_sql(f"select distinct concat(ingredient_id, '-', recipe_id) as id, measure as fk_let_medition_types_id, quantity from ingredient_recipe where is_updated = {True};", cnxn)
             
@@ -320,35 +323,15 @@ with engine.connect() as connection:
                             setStr += f"{key}={val},"
 
                 setStr = setStr[:len(setStr)-1]
-               
-                update = text(f"UPDATE let_recipes_ingredients {setStr} WHERE CONCAT(pfk_let_ingredients_id::text,'-',pfk_let_recipes_id::text)='{ii['id']}'")
                 
+                update = text(f"UPDATE let_recipes_ingredients {setStr} WHERE (pfk_let_ingredients_id::text || '-' || pfk_let_recipes_id::text)='{ii['id']}'")
+
                 connection.execute(update)
+                connection.commit()
                 
         except Exception as Ex:
             pass
 
-        # Deleting 
-        delete_query = sql.SQL(f"""
-            DELETE FROM ingredient_recipe 
-            WHERE is_deleted = {True}
-        """)
-
-        cursor.execute(delete_query)
-        
-
-        delete_query = sql.SQL(f"""
-            DELETE FROM ingredient_restriction 
-            WHERE is_deleted = {True}
-        """)
-        cursor.execute(delete_query)
-        
-        delete_query = sql.SQL(f"""
-            DELETE FROM recipe_restriction 
-            WHERE is_deleted = {True}
-        """)
-
-        cursor.execute(delete_query)
         cnxn.commit()
 
         # Migration to NoSQL - MONGO
@@ -432,11 +415,39 @@ with engine.connect() as connection:
         # N:M Tables - Lists for NoSQL
 
         # getting the IDs of recipes and ingredients that were either INSERTED or UPDATED
-        recipes_ids = tuple(set(df_recipes['external_id']).union(set(df_recipe_update['external_id'])))
+        df_recipes_ids = pd.read_sql(f'''SELECT DISTINCT * FROM (SELECT id FROM recipe r WHERE r.is_updated = {True} OR r.transaction_made = {False} UNION SELECT ir.recipe_id FROM ingredient_recipe ir WHERE ir.is_updated = {True} OR ir.transaction_made = {False} UNION SELECT rr.recipe_id FROM recipe_restriction rr WHERE rr.transaction_made = {False} or rr.is_deleted = {True}) AS t;''', cnxn)
+        
+        recipes_ids = df_recipes_ids.to_records(index=False)
+        
+        try:
+            recipes_ids = tuple([item[0] for item in recipes_ids])
+        except:
+            recipes_ids = (0,0)
+
         while len(recipes_ids) <= 1:
             recipes_ids = (*recipes_ids, 0)
+        recipes_ids_l = []
+        for i in recipes_ids:
+            recipes_ids_l.append(int(i))
+        recipes_ids = tuple(recipes_ids_l)
 
-        ingredient_ids = tuple(set(df_ingredients['external_id']).union(set(df_ingredients_update['external_id'])))
+        df_ingredients_ids = pd.read_sql(f'''select distinct * from (
+            select id from ingredient i where i.is_updated = {True} or i.transaction_made = {False}
+            UNION
+            select ir.ingredient_id  from ingredient_restriction ir where ir.transaction_made = {False} or ir.is_deleted = {True}
+            ) as t;''', cnxn)
+        
+        ingredient_ids = tuple(df_ingredients_ids.to_records(index=False))
+        try:
+            ingredient_ids = tuple([item[0] for item in ingredient_ids])
+        except:
+            ingredient_ids = (0,0)
+            
+        ingredient_ids_l = []
+        for i in ingredient_ids:
+            ingredient_ids_l.append(int(i))
+        ingredient_ids = tuple(ingredient_ids_l)
+        
         while len(ingredient_ids) <= 1:
             ingredient_ids = (*ingredient_ids, 0)
 
@@ -455,7 +466,7 @@ with engine.connect() as connection:
         join let_medition_types lmt 
         on lmt.pk_id = lri.fk_let_medition_types_id 
         where lri.pfk_let_recipes_id in {recipes_ids}""", engine)
-
+        
         df_let_ingredients_restrictions = pd.read_sql(f"select * from let_ingredients_broken_restrictions where pfk_let_ingredients_id in {ingredient_ids}", engine)
 
         restrictions_ids = list(set(df_let_ingredients_restrictions['pfk_let_restrictions_id'].unique()).union(set(df_let_recipes_restrictions['pfk_let_restrictions_id'].unique())))
@@ -563,13 +574,52 @@ with engine.connect() as connection:
             
 
         # Updating transaction status
-        cursor.execute(f"UPDATE ingredient SET transaction_made={True}, is_updated={False} WHERE transaction_made={False}")
-        cursor.execute(f"UPDATE restriction SET transaction_made={True}, is_updated={False} WHERE transaction_made={False}")
+        # Tabelas que possuem o campo updated_at
+
+        cursor.execute(f"UPDATE ingredient SET transaction_made={True} WHERE transaction_made={False}")
+        cursor.execute(f"UPDATE ingredient SET is_updated={False} WHERE is_updated={True}")
+        
+        cursor.execute(f"UPDATE restriction SET transaction_made={True} WHERE transaction_made={False}")
+        cursor.execute(f"UPDATE restriction SET is_updated={False} WHERE is_updated={True}")
+        
+        cursor.execute(f"UPDATE recipe SET transaction_made={True} WHERE transaction_made={False}")
+        cursor.execute(f"UPDATE recipe SET is_updated={False} WHERE is_updated={True}")
+        
+        cursor.execute(f"UPDATE Ingredient_Recipe SET transaction_made={True} WHERE transaction_made={False} and quantity is not null")
+        cursor.execute(f"UPDATE Ingredient_Recipe SET is_updated={False} WHERE is_updated={True} and quantity is not null")
+        
+        cursor.execute(f"UPDATE admin SET transaction_made={True} WHERE transaction_made={False}")
+        cursor.execute(f"UPDATE admin SET is_updated={False} WHERE is_updated={True}")
+
         cursor.execute(f"UPDATE ingredient_restriction SET transaction_made={True} WHERE transaction_made={False}")
-        cursor.execute(f"UPDATE recipe SET transaction_made={True}, is_updated={False} WHERE transaction_made={False}")
-        cursor.execute(f"UPDATE Ingredient_Recipe SET transaction_made={True} WHERE transaction_made={False}")
         cursor.execute(f"UPDATE recipe_restriction SET transaction_made={True} WHERE transaction_made={False}")
-        cursor.execute(f"UPDATE admin SET transaction_made={True}, is_updated={False} WHERE transaction_made={False}")
+        
+        try:
+            connection.commit()
+        except:
+            pass
+        
+        # Deleting 
+        delete_query = sql.SQL(f"""
+            DELETE FROM ingredient_recipe 
+            WHERE is_deleted = {True}
+        """)
+
+        cursor.execute(delete_query)
+        
+
+        delete_query = sql.SQL(f"""
+            DELETE FROM ingredient_restriction 
+            WHERE is_deleted = {True}
+        """)
+        cursor.execute(delete_query)
+        
+        delete_query = sql.SQL(f"""
+            DELETE FROM recipe_restriction 
+            WHERE is_deleted = {True}
+        """)
+
+        cursor.execute(delete_query)
         cnxn.commit()
         connection.commit()
         
