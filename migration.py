@@ -574,7 +574,6 @@ with engine.connect() as connection:
             
 
         # Updating transaction status
-        # Tabelas que possuem o campo updated_at
 
         cursor.execute(f"UPDATE ingredient SET transaction_made={True} WHERE transaction_made={False}")
         cursor.execute(f"UPDATE ingredient SET is_updated={False} WHERE is_updated={True}")
