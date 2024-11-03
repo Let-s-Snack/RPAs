@@ -41,7 +41,7 @@ Para as tabelas origem que se transformaram em duas tabelas no destino, foi apli
 
 ### Recipe
 
-- O campo 'steps' é uma string que representa uma lista, onde cada passo termina com ponto e vírgula (;), então foi criada uma nova tabela contendo o ID da receita, o passo e o número dele.
+- O campo 'steps' é uma string que representa uma lista, onde cada passo termina com ponto e vírgula (;), então foi criada uma tabela contendo o ID da receita, o passo e o número dele.
 
 ### Ingredient_Recipe
 
