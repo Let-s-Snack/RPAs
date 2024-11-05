@@ -128,7 +128,7 @@ with engine.connect() as connection:
 
         df_medition_types = pd.read_sql('SELECT * FROM let_medition_types', engine)
 
-        df_ingredient_recipe = pd.read_sql(f"SELECT ingredient_id, recipe_id, measure, quantity FROM ingredient_recipe WHERE transaction_made={False} and quantity is not null", cnxn)
+        df_ingredient_recipe = pd.read_sql(f"SELECT DISTINCT ingredient_id, recipe_id, measure, quantity FROM ingredient_recipe WHERE transaction_made={False} and quantity is not null", cnxn)
 
         df_ingredient_recipe.columns = ['pfk_let_ingredients_id', 'pfk_let_recipes_id', 'fk_let_medition_types_id', 'quantity']
 
@@ -193,13 +193,16 @@ with engine.connect() as connection:
                 connection.execute(delete, {'x': int(row['restriction_id']), 'y': int(row['recipe_id'])})
                 connection.commit()
         except:
-            print('ERRO 3')
             pass
         
         # UPDATE
         # Admin
+        try:
+            connection.commit()
+        except:
+            pass
         df_adm_update = pd.read_sql(f"select email, password, name, is_deleted from admin where is_updated = {True};", cnxn)
-
+        
         for i, ii in df_adm_update.iterrows():
             setStr = 'SET '
             for key, val in ii.items():
@@ -209,13 +212,11 @@ with engine.connect() as connection:
                     setStr += f"{key}={val},"
 
             setStr = setStr[:len(setStr)-1]
-            
-            
-            update = text(f"UPDATE let_adm {setStr} WHERE email='{val['email']}'")
-            
-            connection.execute(update)
 
-        # Ingredient
+            update = text(f"UPDATE let_adm {setStr} WHERE email = :email")
+            connection.execute(update, {"email": ii['email']})
+        
+            # Ingredient
         df_ingredient_update = pd.read_sql(f"select id, name, description, is_deleted from ingredient where is_updated = {True};", cnxn)
 
         for i, ii in df_ingredient_update.iterrows():
