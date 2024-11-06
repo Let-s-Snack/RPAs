@@ -1,5 +1,3 @@
-# CREATE DATABASE db-lets-snack-1o
-
 -- Dropando tabelas se existirem
 DROP TABLE IF EXISTS Additional_Ingredient;
 
@@ -35,7 +33,7 @@ DROP TABLE IF EXISTS Admin;
 
 CREATE TABLE Admin (
     email varchar(200) NOT NULL PRIMARY KEY,
-    password varchar(50) NOT NULL,
+    password varchar(200) NOT NULL,
     name varchar(100) NOT null,
     is_deleted BOOLEAN DEFAULT FALSE,
     is_updated BOOLEAN default false,
@@ -50,7 +48,7 @@ CREATE TABLE Person (
     password VARCHAR(100) NOT NULL CHECK (LENGTH(password) >= 6),
     subscription BOOLEAN,
     phone VARCHAR(11),
-    image_url VARCHAR(100) DEFAULT 'https://exemplo.com/imagem_padrao.jpg',
+    image_url VARCHAR(1000) DEFAULT 'https://exemplo.com/imagem_padrao.jpg',
     nickname VARCHAR(15) NOT NULL,
     is_adm BOOLEAN DEFAULT FALSE,
     registration_completed BOOLEAN,
@@ -63,7 +61,7 @@ CREATE TABLE Restriction (
     type VARCHAR(50) NOT NULL,
     is_deleted BOOLEAN DEFAULT FALSE,
     is_updated BOOLEAN DEFAULT FALSE,
-    image_url VARCHAR(100) DEFAULT 'https://exemplo.com/imagem_padrao.jpg',
+    image_url VARCHAR(1000) DEFAULT 'https://exemplo.com/imagem_padrao.jpg',
     transaction_made BOOLEAN DEFAULT FALSE,
     description VARCHAR(300)
 );
@@ -81,7 +79,7 @@ CREATE TABLE Recipe (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     is_deleted BOOLEAN DEFAULT FALSE,
-    image_url VARCHAR(100) DEFAULT 'https://exemplo.com/imagem_padrao.jpg',
+    image_url VARCHAR(1000) DEFAULT 'https://exemplo.com/imagem_padrao.jpg',
     steps VARCHAR(750),
     is_updated BOOLEAN DEFAULT FALSE,
     transaction_made BOOLEAN DEFAULT FALSE,

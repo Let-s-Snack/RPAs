@@ -1,5 +1,3 @@
-# CREATE DATABASE db-lets-snack-2o
-
 DROP TABLE IF EXISTS let_accesses CASCADE;
 
 DROP TABLE IF EXISTS let_access_types CASCADE;
@@ -112,7 +110,7 @@ CREATE TABLE let_restrictions (
     name VARCHAR(45) NOT NULL,
     description VARCHAR(1000) NULL,
     is_deleted BOOLEAN,
-    url_photo VARCHAR(200) NOT NULL,
+    url_photo VARCHAR(1000) NOT NULL,
     creation_date TIMESTAMP NOT NULL
 );
 
@@ -120,9 +118,9 @@ CREATE TABLE let_persons (
     pk_id SERIAL CONSTRAINT idx_let_persons_id PRIMARY KEY,
     name VARCHAR(200) NOT NULL,
     nickname VARCHAR(100) NOT NULL,
-    url_photo VARCHAR(200) NULL,
+    url_photo VARCHAR(1000) NULL,
     email VARCHAR(200) NOT NULL UNIQUE,
-    password VARCHAR(40) NOT NULL,
+    password VARCHAR(200) NOT NULL,
     is_pro BOOLEAN not null,
     registration_completed BOOLEAN NOT NULL,
     fk_let_genders_id INT NOT NULL,
@@ -183,7 +181,7 @@ CREATE TABLE let_recipes (
     pk_id INT CONSTRAINT idx_let_recipes_id PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
-    url_photo VARCHAR(200) NULL,
+    url_photo VARCHAR(1000) NULL,
     is_deleted BOOLEAN,
     average_rating FLOAT NOT null default 0,
     creation_date TIMESTAMP NOT NULL
@@ -283,15 +281,6 @@ CREATE TABLE let_chats (
     CONSTRAINT idx_let_chats_fk_let_persons_id FOREIGN KEY (fk_let_persons_id) REFERENCES let_persons (pk_id)
 );
 
-create table let_ia_responses (
-    pk_id SERIAL CONSTRAINT idx_let_ia_responses_id PRIMARY KEY,
-    email VARCHAR(200) not null,
-    weight FLOAT not null,
-    height float not null,
-    response boolean not null,
-    creation_date TIMESTAMP not null default CURRENT_TIMESTAMP
-);
-
 CREATE TABLE let_chat_messages (
     pk_id SERIAL CONSTRAINT idx_let_chat_messages_id PRIMARY KEY,
     fk_let_chats_id INT NOT NULL,
@@ -316,8 +305,69 @@ CREATE TABLE let_accesses (
     CONSTRAINT idx_let_access_types_fk_let_access_types_id FOREIGN KEY (fk_let_access_types_id) REFERENCES let_access_types (pk_id)
 );
 
--- CRIANDO TABELAS DE LOG
+create table let_ia_responses (
+    pk_id SERIAL CONSTRAINT idx_let_ia_responses_id PRIMARY KEY,
+    email VARCHAR(200) not null,
+    weight FLOAT not null,
+    height float not null,
+    exercise INT not null,
+    self INT not null,
+    fast_food INT not null,
+    soda INT not null,
+    response_obesity varchar(45) not null,
+    response_habits int not null,
+    is_possible_user boolean not null,
+    score INT not null,
+    creation_date TIMESTAMP not null default CURRENT_TIMESTAMP
+);
+-- CRIACAO DE INDEX PARA AS FOREIGN KEYS
+CREATE INDEX IF NOT EXISTS idx_let_persons_fk_let_genders_id ON let_persons (fk_let_genders_id);
 
+CREATE INDEX IF NOT EXISTS idx_let_persons_restrictions_pfk_let_persons_id ON let_persons_restrictions (pfk_let_persons_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_persons_restrictions_pfk_let_restrictions_id ON let_persons_restrictions (pfk_let_restrictions_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_ingredients_broken_restrictions_pfk_let_ingredients_id ON let_ingredients_broken_restrictions (pfk_let_ingredients_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_ingredients_broken_restrictions_pfk_let_restrictions_id ON let_ingredients_broken_restrictions (pfk_let_restrictions_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_persons_ingredients_pfk_let_ingredients_id ON let_persons_ingredients (pfk_let_ingredients_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_persons_ingredients_pfk_let_persons_id ON let_persons_ingredients (pfk_let_persons_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_recipes_ingredients_pfk_let_ingredients_id ON let_recipes_ingredients (pfk_let_ingredients_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_recipes_ingredients_pfk_let_recipes_id ON let_recipes_ingredients (pfk_let_recipes_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_recipes_ingredients_fk_let_medition_types_id ON let_recipes_ingredients (fk_let_medition_types_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_recipes_broken_restrictions_pfk_let_restrictions_id ON let_recipes_broken_restrictions (pfk_let_restrictions_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_recipes_broken_restrictions_pfk_let_recipes_id ON let_recipes_broken_restrictions (pfk_let_recipes_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_favorites_pfk_let_persons_id ON let_favorites (pfk_let_persons_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_favorites_pfk_let_recipes_id ON let_favorites (pfk_let_recipes_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_coments_pfk_let_persons_id ON let_coments (pfk_let_persons_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_coments_pfk_let_recipes_id ON let_coments (pfk_let_recipes_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_preparation_methods_fk_let_recipes_id ON let_preparation_methods (fk_let_recipes_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_wishlist_pfk_let_persons_id ON let_wishlist (pfk_let_persons_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_wishlist_pfk_let_recipes_id ON let_wishlist (pfk_let_recipes_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_chats_fk_let_persons_id ON let_chats (fk_let_persons_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_chat_messages_fk_let_chats_id ON let_chat_messages (fk_let_chats_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_accesses_fk_let_access_types_id ON let_accesses (fk_let_access_types_id);
+
+CREATE INDEX IF NOT EXISTS idx_let_accesses_fk_let_persons_id ON let_accesses (fk_let_persons_id);
+
+-- CRIANDO TABELAS DE LOG
 CREATE TABLE let_log_coments (
     operation_date timestamp NOT NULL,
     operation varchar(80) NOT NULL,
@@ -390,18 +440,17 @@ CREATE TABLE let_log_persons (
     audit_old_value text NULL
 );
 -- TRIGGERS LOG
-
 -- let_coments
 CREATE OR REPLACE FUNCTION func_let_coments_log() 
-	RETURNS TRIGGER AS $$
-	DECLARE
-	    pg_user varchar(80);
-	    operation varchar(20) := TG_OP;
-	    audit_old_value text;
-	BEGIN
-	    SELECT current_user INTO pg_user;
-	    
-	    IF (operation = 'UPDATE') THEN
+    RETURNS TRIGGER AS $$
+    DECLARE
+        pg_user varchar(80);
+        operation varchar(20) := TG_OP;
+        audit_old_value text;
+    BEGIN
+        SELECT current_user INTO pg_user;
+        
+        IF (operation = 'UPDATE') THEN
         audit_old_value := 
             CASE 
                 WHEN NEW.pfk_let_persons_id <> OLD.pfk_let_persons_id THEN ', pfk_let_persons_id:' || OLD.pfk_let_persons_id::TEXT 
@@ -433,14 +482,14 @@ CREATE OR REPLACE FUNCTION func_let_coments_log()
         VALUES(current_timestamp, operation, pg_user, NEW.pfk_let_persons_id, NEW.pfk_let_recipes_id, NEW.rating, NEW.mensage, NEW.creation_date);
     
     ELSIF (operation = 'DELETE') THEN
-	        INSERT INTO public.let_log_coments
-	            (operation_date, operation, pg_user, pfk_let_persons_id, pfk_let_recipes_id, rating, mensage, creation_date)
-	        VALUES(current_timestamp, operation, pg_user, OLD.pfk_let_persons_id, OLD.pfk_let_recipes_id, OLD.rating, OLD.mensage, OLD.creation_date);
-	    
-	    END IF;
-	    
-	    RETURN NEW;
-	END;
+            INSERT INTO public.let_log_coments
+                (operation_date, operation, pg_user, pfk_let_persons_id, pfk_let_recipes_id, rating, mensage, creation_date)
+            VALUES(current_timestamp, operation, pg_user, OLD.pfk_let_persons_id, OLD.pfk_let_recipes_id, OLD.rating, OLD.mensage, OLD.creation_date);
+        
+        END IF;
+        
+        RETURN NEW;
+    END;
 $$ LANGUAGE plpgsql;
 
 CREATE
@@ -452,7 +501,6 @@ INSERT
 UPDATE
 OR DELETE ON let_coments FOR EACH ROW
 EXECUTE FUNCTION func_let_coments_log ();
-
 -- let_recipes
 CREATE OR REPLACE FUNCTION func_let_recipes_log() 
 RETURNS TRIGGER AS $$
@@ -493,7 +541,7 @@ BEGIN
             WHEN NEW.creation_date <> OLD.creation_date THEN ', creation_date:' || OLD.creation_date::TEXT 
             ELSE '' 
         END;
-       
+        
     INSERT INTO public.let_log_recipes
         (operation_date, operation, pg_user, pk_id, name, description, url_photo, average_rating, is_deleted, creation_date, audit_old_value)
     VALUES(current_timestamp, operation, pg_user, NEW.pk_id, NEW.name, NEW.description, NEW.url_photo, NEW.average_rating, new.is_deleted, NEW.creation_date, audit_old_value);
@@ -502,12 +550,12 @@ ELSIF (operation = 'INSERT') THEN
     INSERT INTO public.let_log_recipes
         (operation_date, operation, pg_user, pk_id, name, description, url_photo, average_rating, is_deleted, creation_date)
     VALUES(current_timestamp, operation, pg_user, NEW.pk_id, NEW.name, NEW.description, NEW.url_photo, NEW.average_rating, new.is_deleted, NEW.creation_date);
-   
+    
 ELSIF (operation = 'DELETE') THEN
     INSERT INTO public.let_log_recipes
         (operation_date, operation, pg_user, pk_id, name, description, url_photo, average_rating, is_deleted, creation_date)
     VALUES(current_timestamp, operation, pg_user, OLD.pk_id, OLD.name, OLD.description, OLD.url_photo, OLD.average_rating, old.is_deleted, OLD.creation_date);
-   
+    
     RETURN OLD;
     END IF;
     
@@ -524,7 +572,6 @@ INSERT
 UPDATE
 OR DELETE ON let_recipes FOR EACH ROW
 EXECUTE FUNCTION func_let_recipes_log ();
-
 -- let_chats
 CREATE OR REPLACE FUNCTION func_let_chats_log() 
 RETURNS TRIGGER AS $$
@@ -553,7 +600,7 @@ BEGIN
             WHEN NEW.creation_date <> OLD.creation_date THEN ', creation_date:' || OLD.creation_date::TEXT 
             ELSE '' 
         END;
-       
+        
     INSERT INTO public.let_log_chats
         (operation_date, operation, pg_user, pk_id, fk_let_persons_id, is_active, creation_date, audit_old_value)
     VALUES(current_timestamp, operation, pg_user, NEW.pk_id, NEW.fk_let_persons_id, new.is_active, NEW.creation_date, audit_old_value);
@@ -562,12 +609,12 @@ ELSIF (operation = 'INSERT') THEN
     INSERT INTO public.let_log_chats
         (operation_date, operation, pg_user, pk_id, fk_let_persons_id, is_active, creation_date)
     VALUES(current_timestamp, operation, pg_user, NEW.pk_id, NEW.fk_let_persons_id, new.is_active, NEW.creation_date);
-   
+    
 ELSIF (operation = 'DELETE') THEN
         INSERT INTO public.let_log_chats
             (operation_date, operation, pg_user, pk_id, fk_let_persons_id, is_active, creation_date)
         VALUES(current_timestamp, operation, pg_user, OLD.pk_id, OLD.fk_let_persons_id, old.is_active, OLD.creation_date);
-       
+        
         RETURN OLD;
     END IF;
     
@@ -584,7 +631,6 @@ INSERT
 UPDATE
 OR DELETE ON let_chats FOR EACH ROW
 EXECUTE FUNCTION func_let_chats_log ();
-
 -- let_persons_ingredients
 CREATE OR REPLACE FUNCTION func_let_persons_ingredients_log() 
 RETURNS TRIGGER AS $$
@@ -593,17 +639,17 @@ DECLARE
     operation varchar(20) := TG_OP;
 BEGIN
     SELECT current_user INTO pg_user;
-   
+    
     IF (operation = 'INSERT') THEN
     INSERT INTO public.let_log_persons_ingredients
         (operation_date, operation, pg_user, pfk_let_persons_id, pfk_let_ingredients_id)
     VALUES(current_timestamp, operation, pg_user, NEW.pfk_let_persons_id, NEW.pfk_let_ingredients_id);
-   
+    
 ELSIF (operation = 'DELETE') THEN
         INSERT INTO public.let_log_persons_ingredients
             (operation_date, operation, pg_user, pfk_let_persons_id, pfk_let_ingredients_id)
         VALUES(current_timestamp, operation, pg_user, OLD.pfk_let_persons_id, OLD.pfk_let_ingredients_id);
-       
+        
         RETURN OLD;
     END IF;
     
@@ -618,7 +664,6 @@ REPLACE
 INSERT
     OR DELETE ON let_persons_ingredients FOR EACH ROW
 EXECUTE FUNCTION func_let_persons_ingredients_log ();
-
 -- let_persons_restrictions
 CREATE OR REPLACE FUNCTION func_let_persons_restrictions_log() 
 RETURNS TRIGGER AS $$
@@ -627,17 +672,17 @@ DECLARE
     operation varchar(20) := TG_OP;
 BEGIN
     SELECT current_user INTO pg_user;
-   
+    
     IF (operation = 'INSERT') THEN
     INSERT INTO public.let_log_persons_restrictions
         (operation_date, operation, pg_user, pfk_let_persons_id, pfk_let_restrictions_id)
     VALUES(current_timestamp, operation, pg_user, NEW.pfk_let_persons_id, NEW.pfk_let_restrictions_id);
-   
+    
 ELSIF (operation = 'DELETE') THEN
         INSERT INTO public.let_log_persons_restrictions
             (operation_date, operation, pg_user, pfk_let_persons_id, pfk_let_restrictions_id)
         VALUES(current_timestamp, operation, pg_user, OLD.pfk_let_persons_id, OLD.pfk_let_restrictions_id);
-       
+        
         RETURN OLD;
     END IF;
     
@@ -652,7 +697,6 @@ REPLACE
 INSERT
     OR DELETE ON let_persons_restrictions FOR EACH ROW
 EXECUTE FUNCTION func_let_persons_restrictions_log ();
-
 -- let_persons
 CREATE OR REPLACE FUNCTION func_let_persons_log() 
 RETURNS TRIGGER AS $$
@@ -713,21 +757,21 @@ BEGIN
             WHEN NEW.creation_date <> OLD.creation_date THEN ', creation_date: ' || OLD.creation_date::TEXT 
             ELSE '' 
         END;
-       
-   INSERT INTO public.let_log_persons
-		(operation_date, operation, pg_user, pk_id, "name", nickname, url_photo, email, "password", is_pro, registration_completed, fk_let_genders_id, birth_date, cellphone, creation_date, audit_old_value)
-	VALUES(current_timestamp, operation , pg_user , new.pk_id, new.name, new.nickname, new.url_photo, new.email, new.password, new.is_pro, new.registration_completed, new.fk_let_genders_id, new.birth_date, new.cellphone, new.creation_date, audit_old_value);
+        
+    INSERT INTO public.let_log_persons
+        (operation_date, operation, pg_user, pk_id, "name", nickname, url_photo, email, "password", is_pro, registration_completed, fk_let_genders_id, birth_date, cellphone, creation_date, audit_old_value)
+    VALUES(current_timestamp, operation , pg_user , new.pk_id, new.name, new.nickname, new.url_photo, new.email, new.password, new.is_pro, new.registration_completed, new.fk_let_genders_id, new.birth_date, new.cellphone, new.creation_date, audit_old_value);
 
 ELSIF (operation = 'INSERT') THEN
-   INSERT INTO public.let_log_persons
-  		(operation_date, operation, pg_user, pk_id, "name", nickname, url_photo, email, "password", is_pro, registration_completed, fk_let_genders_id, birth_date, cellphone, creation_date)
-   VALUES(current_timestamp, operation , pg_user , new.pk_id, new.name, new.nickname, new.url_photo, new.email, new.password, new.is_pro, new.registration_completed, new.fk_let_genders_id, new.birth_date, new.cellphone, new.creation_date);
-     
+    INSERT INTO public.let_log_persons
+        (operation_date, operation, pg_user, pk_id, "name", nickname, url_photo, email, "password", is_pro, registration_completed, fk_let_genders_id, birth_date, cellphone, creation_date)
+    VALUES(current_timestamp, operation , pg_user , new.pk_id, new.name, new.nickname, new.url_photo, new.email, new.password, new.is_pro, new.registration_completed, new.fk_let_genders_id, new.birth_date, new.cellphone, new.creation_date);
+        
 ELSIF (operation = 'DELETE') THEN
-   INSERT INTO public.let_log_persons
-  		(operation_date, operation, pg_user, pk_id, "name", nickname, url_photo, email, "password", is_pro, registration_completed, fk_let_genders_id, birth_date, cellphone, creation_date)
-	   VALUES(current_timestamp, operation , pg_user , old.pk_id, old.name, old.nickname, old.url_photo, old.email, old.password, old.is_pro, old.registration_completed, old.fk_let_genders_id, old.birth_date, old.cellphone, old.creation_date);
-       
+    INSERT INTO public.let_log_persons
+        (operation_date, operation, pg_user, pk_id, "name", nickname, url_photo, email, "password", is_pro, registration_completed, fk_let_genders_id, birth_date, cellphone, creation_date)
+        VALUES(current_timestamp, operation , pg_user , old.pk_id, old.name, old.nickname, old.url_photo, old.email, old.password, old.is_pro, old.registration_completed, old.fk_let_genders_id, old.birth_date, old.cellphone, old.creation_date);
+        
         RETURN OLD;
     END IF;
     
@@ -744,99 +788,107 @@ INSERT
 update
 or DELETE ON let_persons FOR EACH ROW
 EXECUTE FUNCTION func_let_persons_log ();
-
 -- Procedures
-
 -- Adiciona em uma tabela quais partes (login, receitas da semana, wishlist, etc) do app o usuario acessou.
 CREATE OR REPLACE PROCEDURE rastrear_usuario(access_type varchar, person_id int) as 
 $$
 declare
-	access_type_id int;
+    access_type_id int;
 begin
-	access_type_id := (select pk_id from let_access_types where "type" like INITCAP(access_type));
-	if access_type_id is null then
-		insert into let_access_types (type, creation_date) values (INITCAP(access_type), current_timestamp) returning pk_id into access_type_id;
-	end if;
+    access_type_id := (select pk_id from let_access_types where "type" like INITCAP(access_type));
+    if access_type_id is null then
+        insert into let_access_types (type, creation_date) values (INITCAP(access_type), current_timestamp) returning pk_id into access_type_id;
+    end if;
 
-	insert into let_accesses(fk_let_access_types_id, fk_let_persons_id, creation_date) values (access_type_id, person_id, current_timestamp);
+    insert into let_accesses(fk_let_access_types_id, fk_let_persons_id, creation_date) values (access_type_id, person_id, current_timestamp);
 END;
 $$ LANGUAGE plpgsql;
 -- call rastrear_usuario('Login', 1);
-
 -- Insere um cadastro completo de usuário, passando para as tabelas relacionais listas.
 CREATE OR REPLACE PROCEDURE insert_person(
-	person_name varchar, gender_id int, is_pro bool, registration_completed bool, nickname varchar, pwd varchar, 
-	email varchar,  url_photo varchar, birth_date date, cellphone varchar, restrictions int[], ingredients int[]
+    person_name varchar, gender_id int, is_pro bool, registration_completed bool, nickname varchar, pwd varchar, 
+    email varchar,  url_photo varchar, birth_date date, cellphone varchar, restrictions int[], ingredients int[]
 ) as 
 $$
 declare 
-	person_id int := (SELECT pk_id FROM let_persons ORDER BY pk_id DESC LIMIT 1) + 1;
-	item int;
+    person_id int := (SELECT pk_id FROM let_persons ORDER BY pk_id DESC LIMIT 1) + 1;
+    item int;
 begin 
-	INSERT INTO public.let_persons(
-	pk_id, "name", nickname, url_photo, email, "password", is_pro, registration_completed, fk_let_genders_id, birth_date, cellphone, creation_date)
+    INSERT INTO public.let_persons(
+    pk_id, "name", nickname, url_photo, email, "password", is_pro, registration_completed, fk_let_genders_id, birth_date, cellphone, creation_date)
 values (person_id, person_name, nickname, url_photo, email, pwd, is_adm, is_pro, registration_completed, gender_id, birth_date, cellphone, current_timestamp);
 
 FOR i IN 1 .. array_length(restrictions, 1) LOOP
     item := restrictions[i];
-   	if NOT exists (select pk_id from let_restrictions li where pk_id = item) then
-   		raise exception 'Ingrediente com ID % não existe', item;
-   	end if;
-   
-   	INSERT INTO public.let_persons_restrictions(pfk_let_persons_id, pfk_let_restrictions_id)
-	VALUES(person_id, item);
+    if NOT exists (select pk_id from let_restrictions li where pk_id = item) then
+        raise exception 'Ingrediente com ID % não existe', item;
+    end if;
+    
+    INSERT INTO public.let_persons_restrictions(pfk_let_persons_id, pfk_let_restrictions_id)
+    VALUES(person_id, item);
 end loop;
 
 FOR i IN 1 .. array_length(ingredients, 1) LOOP
     item := ingredients[i];
-   	if NOT exists (select pk_id from let_ingredients lr where pk_id = item) then
-   		raise exception 'Restrição com ID % não existe', item;
-       	end if;
-       
-       	INSERT INTO public.let_persons_ingredients(pfk_let_persons_id, pfk_let_ingredients_id)
-		VALUES(person_id, item);
+    if NOT exists (select pk_id from let_ingredients lr where pk_id = item) then
+        raise exception 'Restrição com ID % não existe', item;
+        end if;
+        
+        INSERT INTO public.let_persons_ingredients(pfk_let_persons_id, pfk_let_ingredients_id)
+        VALUES(person_id, item);
     END LOOP;
 END;
 $$ LANGUAGE plpgsql;
-
+-- CALL insert_person(
+--    'John Doe',           -- person_name
+--    2,                    -- gender_id (assumindo que 2 é um valor válido)
+--    TRUE,                 -- is_pro
+--    TRUE,                 -- registration_completed
+--    'johndoe',            -- nickname
+--    'secret123',          -- pwd
+--    'john.doe@example.com', -- email
+--    'http://example.com/photo.jpg', -- url_photo
+--    '1985-05-15',         -- birth_date
+--    '+1234567890',       -- cellphone
+--    ARRAY[1, 3],          -- restrictions (IDs 1 and 3, valid in let_restrictions)
+--    ARRAY[2, 5]           -- ingredients (IDs 2 and 5, valid in let_ingredients)
+--);
 -- Calcula as restrições da receita com base nas restrições dos ingredientes dele.
 CREATE OR REPLACE PROCEDURE insert_recipe_broken_restrictions(recipe_id int) as 
 $$
 begin
-	delete from let_recipes_broken_restrictions where pfk_let_recipes_id = recipe_id;
-	
-	INSERT INTO let_recipes_broken_restrictions (pfk_let_restrictions_id, pfk_let_recipes_id)
-	SELECT DISTINCT libr.pfk_let_restrictions_id, recipe_id
-	FROM let_recipes lr
-	JOIN let_recipes_ingredients lri ON lr.pk_id = lri.pfk_let_recipes_id
-	JOIN let_ingredients_broken_restrictions libr ON libr.pfk_let_ingredients_id = lri.pfk_let_ingredients_id
-	WHERE lr.pk_id = recipe_id;
+    delete from let_recipes_broken_restrictions where pfk_let_recipes_id = recipe_id;
+    
+    INSERT INTO let_recipes_broken_restrictions (pfk_let_restrictions_id, pfk_let_recipes_id)
+    SELECT DISTINCT libr.pfk_let_restrictions_id, recipe_id
+    FROM let_recipes lr
+    JOIN let_recipes_ingredients lri ON lr.pk_id = lri.pfk_let_recipes_id
+    JOIN let_ingredients_broken_restrictions libr ON libr.pfk_let_ingredients_id = lri.pfk_let_ingredients_id
+    WHERE lr.pk_id = recipe_id;
 END;
 $$ LANGUAGE plpgsql;
 --call insert_recipe_broken_restrictions(1)
-
 --Triggers
-
 -- Trigger para atualizar a média de avaliação da receita - EXTRA
 CREATE OR REPLACE FUNCTION func_calculate_average_rating() 
 RETURNS TRIGGER AS $$
 DECLARE
-	avg_rating float;
+    avg_rating float;
 begin
-	IF (TG_OP = 'DELETE') THEN
-		avg_rating := (select AVG(rating)::float from let_coments lc 
-					  where old.pfk_let_recipes_id = lc.pfk_let_recipes_id);
-					 
-		update let_recipes set average_rating = avg_rating where old.pfk_let_recipes_id = pk_id;
-	else
-		avg_rating := (select AVG(rating)::float from let_coments lc 
-					  where new.pfk_let_recipes_id = lc.pfk_let_recipes_id);
-					 
-		update let_recipes set average_rating = avg_rating where new.pfk_let_recipes_id = pk_id;
-	
-	end if;
-	
-	return new;
+    IF (TG_OP = 'DELETE') THEN
+        avg_rating := (select AVG(rating)::float from let_coments lc 
+                        where old.pfk_let_recipes_id = lc.pfk_let_recipes_id);
+                        
+        update let_recipes set average_rating = avg_rating where old.pfk_let_recipes_id = pk_id;
+    else
+        avg_rating := (select AVG(rating)::float from let_coments lc 
+                        where new.pfk_let_recipes_id = lc.pfk_let_recipes_id);
+                        
+        update let_recipes set average_rating = avg_rating where new.pfk_let_recipes_id = pk_id;
+    
+    end if;
+    
+    return new;
 END;
 $$ LANGUAGE plpgsql;
 
@@ -849,7 +901,6 @@ INSERT
 update
 or DELETE ON let_coments FOR EACH ROW
 EXECUTE FUNCTION func_calculate_average_rating ();
-
 -- Fuctions
 CREATE OR REPLACE FUNCTION func_adm_verification(email_input varchar, pwd_input varchar)
 RETURNS TABLE (
@@ -863,7 +914,7 @@ BEGIN
     INTO tableAdm
     FROM let_adm la
     WHERE la.email = email_input AND la.password = pwd_input;
-   
+    
     IF tableAdm = 1 THEN
         is_adm := true;
     ELSE
