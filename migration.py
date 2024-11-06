@@ -472,9 +472,12 @@ with engine.connect() as connection:
 
         restrictions_ids = list(set(df_let_ingredients_restrictions['pfk_let_restrictions_id'].unique()).union(set(df_let_recipes_restrictions['pfk_let_restrictions_id'].unique())))
         restrictions_ids = [int(x) for x in restrictions_ids]
-
+        
+        ingredients_recipes_ids = set()
+        for i in df_let_recipes_ingredients['pfk_let_ingredients_id'].unique():
+            ingredients_recipes_ids.add(int(i))
         # collecting _ids from collected ids
-        df_ingredients_no = pd.DataFrame(ingredients_collection.find({"external_id": {"$in": ingredient_ids}}, {'_id':1, "external_id": 1}))
+        df_ingredients_no = pd.DataFrame(ingredients_collection.find({"external_id": {"$in": list(set(ingredient_ids).union(ingredients_recipes_ids))}}, {'_id':1, "external_id": 1}))
 
         df_restrictions_no = pd.DataFrame(restrictions_collection.find({"external_id": {"$in": restrictions_ids}}, {'_id':1, "external_id": 1})) 
 
@@ -490,6 +493,7 @@ with engine.connect() as connection:
         df_let_ingredients_restrictions = df_let_ingredients_restrictions.groupby('pfk_let_ingredients_id')['pfk_let_restrictions_id'].agg(list).reset_index()
 
         df_let_recipes_restrictions = df_let_recipes_restrictions.groupby('pfk_let_recipes_id')['pfk_let_restrictions_id'].agg(list).reset_index()
+        print(df_let_recipes_ingredients)
 
         ingredients_recipes = []
         for key, val in df_let_recipes_ingredients.iterrows():
