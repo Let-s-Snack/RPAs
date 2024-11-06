@@ -351,7 +351,7 @@ with engine.connect() as connection:
                 update[i] = ii
 
             adm_collection.update_one(
-                {'external_id': val['external_id']},
+                {'email': val['email']},
                 {"$set":update}
             )
             update = {}
