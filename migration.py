@@ -493,7 +493,6 @@ with engine.connect() as connection:
         df_let_ingredients_restrictions = df_let_ingredients_restrictions.groupby('pfk_let_ingredients_id')['pfk_let_restrictions_id'].agg(list).reset_index()
 
         df_let_recipes_restrictions = df_let_recipes_restrictions.groupby('pfk_let_recipes_id')['pfk_let_restrictions_id'].agg(list).reset_index()
-        print(df_let_recipes_ingredients)
 
         ingredients_recipes = []
         for key, val in df_let_recipes_ingredients.iterrows():

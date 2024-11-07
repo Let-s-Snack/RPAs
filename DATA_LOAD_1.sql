@@ -3290,2384 +3290,2384 @@ VALUES
         1,
         TRUE
     ), -- tomate -- é 889 msm
--- Slada de tomate (recipe_id: 2)
-(
-    2,
-    2,
-    'Unidade',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-), -- tomate
-(
-    12,
-    2,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- sal
-(
-    11,
-    2,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- azeite
-(
-    7,
-    2,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1 / 4,
-    TRUE
-), -- manjericão
--- Bolo de nozes  (recipe_id: 3)
-(
-    4,
-    3,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1.5,
-    TRUE
-), --farinha de trigo 
-(
-    62,
-    3,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --açucar
-(
-    5,
-    3,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- nozes picadas
-(
-    64,
-    3,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), -- sopa de fermento em pó 
-(
-    179,
-    3,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), -- óleo vegetal
-(
-    131,
-    3,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), -- leite vegetal
--- Pão de forma   (recipe_id: 4)
-(
-    4,
-    4,
-    'Xícara',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), --farinha de trigo 
-(
-    64,
-    4,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --fermento 
-(
-    62,
-    4,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- açúcar 
-(
-    12,
-    4,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), -- sal 
-(
-    22,
-    4,
-    'ml',
-    FALSE,
-    FALSE,
-    60,
-    TRUE
-), -- água vegetal 
-(
-    179,
-    4,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- óleo vegetal
--- Panqueca    (recipe_id: 5)
-(
-    4,
-    5,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --farinha de trigo 
-(
-    131,
-    5,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --leite vegtal 
-(
-    179,
-    5,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- oléo vegetal
-(
-    64,
-    5,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- fermento
-(
-    12,
-    5,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- sal
---Bolo de laranja sem lactose     (recipe_id: 6)
-(
-    4,
-    6,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1.5,
-    TRUE
-), --farinha de trigo 
-(
-    62,
-    6,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --açúcar
-(
-    180,
-    6,
-    'Unidade',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- suco de laranja 
-(
-    179,
-    6,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- óleo vegetal
-(
-    64,
-    6,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- fermento me pó
---Panqueca de banana sem lactose     (recipe_id: 7)
-(
-    36,
-    7,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --banana 
-(
-    4,
-    7,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --farinha de trigo 
-(
-    131,
-    7,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- leite vegetal 
-(
-    64,
-    7,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- fermento em pó
--- Risoto de Cogumelos sem lactose    (recipe_id: 8)
-(
-    72,
-    8,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --arroz arbóreo 
-(
-    68,
-    8,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --cogumelos  
-(
-    74,
-    8,
-    'Xícara',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-), -- caldo de legumes  
-(
-    17,
-    8,
-    'Unidade',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- cebola
-(
-    10,
-    8,
-    'Dente',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --alho 
-(
-    11,
-    8,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), --azeite 
-(
-    73,
-    8,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), -- vinho branco 
-(
-    12,
-    8,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- sal
--- Pão de Queijo Vegano    (recipe_id: 9)
-(
-    110,
-    9,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1.5,
-    TRUE
-), --polvilho doce
-(
-    46,
-    9,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), --polvilho azedo 
-(
-    20,
-    9,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- batata
-(
-    12,
-    9,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- sal
-(
-    179,
-    9,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), --oléo vegetal
--- Sorvete de Bnana e Cacau     (recipe_id: 10)
-(
-    36,
-    10,
-    'Unidade',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-), --banana
-(
-    130,
-    10,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), --cacau em po  
-(
-    62,
-    10,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- açúcar
--- Torta de maça sem lactose   (recipe_id: 11)
-(
-    4,
-    11,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1.5,
-    TRUE
-), --farinha de trigo 
-(
-    62,
-    11,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --açúcar  
-(
-    145,
-    11,
-    'Unidade',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- maçãs
-(
-    103,
-    11,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- canela 
-(
-    179,
-    11,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), --oléo vegetal
-(
-    64,
-    11,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), --fermento em pó
--- Pudim de coco sem lactose (recipe_id: 12)
-(
-    56,
-    12,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- leite de coco
-(
-    62,
-    12,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- açúcar
-(
-    163,
-    12,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- amido de milho
-(
-    181,
-    12,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), -- coco ralado
--- Brownie sem lactose (recipe_id: 13)
-(
-    4,
-    13,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- farinha de trigo
-(
-    130,
-    13,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- cacau em pó
-(
-    62,
-    13,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- açúcar
-(
-    179,
-    13,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- óleo vegetal
-(
-    64,
-    13,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- fermento em pó
-(
-    165,
-    13,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- chocolate sem lactose
--- Pizza sem lactose (recipe_id: 14)
-(
-    4,
-    14,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- farinha de trigo
-(
-    64,
-    14,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- fermento
-(
-    22,
-    14,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- água
-(
-    12,
-    14,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- sal
-(
-    77,
-    14,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- molho de tomate
-(
-    81,
-    14,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- temperos
--- Iogurte de coco caseiro (recipe_id: 15)
-(
-    56,
-    15,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- leite de coco
-(
-    182,
-    15,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- chá de lactobacilos
-(
-    127,
-    15,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- mel
--- Mousse de Chocolate sem lactose (recipe_id: 16)
-(
-    165,
-    16,
-    'Gramas',
-    FALSE,
-    FALSE,
-    200,
-    TRUE
-), -- chocolate sem lactose
-(
-    56,
-    16,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- leite de coco
-(
-    62,
-    16,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- açúcar
--- Empadão de palmito sem lactose (recipe_id: 17)
-(
-    4,
-    17,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- farinha de trigo
-(
-    179,
-    17,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- óleo vegetal
-(
-    84,
-    17,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- palmito
-(
-    17,
-    17,
-    'Unidade',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- cebola
-(
-    10,
-    17,
-    'Dente',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- alho
-(
-    81,
-    17,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- temperos
-(
-    22,
-    17,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.25,
-    TRUE
-), -- água
--- Leite condensado vegano (recipe_id: 18)
-(
-    131,
-    18,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- leite vegetal
-(
-    62,
-    18,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- açúcar
-(
-    163,
-    18,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- amido de milho
--- Creme de abóbora sem lactose (recipe_id: 19)
-(
-    94,
-    19,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- abóbora
-(
-    17,
-    19,
-    'Unidade',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- cebola
-(
-    10,
-    19,
-    'Dente',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- alho
-(
-    74,
-    19,
-    'Xícaras',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- caldo de legumes
-(
-    12,
-    19,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- sal
-(
-    11,
-    19,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- azeite
--- Quiche de espinafre sem lactose (recipe_id: 20)
-(
-    4,
-    20,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1.5,
-    TRUE
-), -- farinha de trigo
-(
-    179,
-    20,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- óleo vegetal
-(
-    90,
-    20,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- espinafre
-(
-    17,
-    20,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- cebola
-(
-    10,
-    20,
-    'Dente',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- alho
-(
-    140,
-    20,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- tofu
--- Bolo de cenoura sem lactose (recipe_id: 21)
-(
-    4,
-    21,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1.5,
-    TRUE
-), -- farinha de trigo
-(
-    16,
-    21,
-    'Unidade',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- cenoura
-(
-    62,
-    21,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- açúcar
-(
-    179,
-    21,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- óleo vegetal
-(
-    64,
-    21,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- fermento
--- Pão integral sem lactose (recipe_id: 22)
-(
-    85,
-    22,
-    'Xícara',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- farinha integral
-(
-    64,
-    22,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- fermento
-(
-    62,
-    22,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- açúcar
-(
-    12,
-    22,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- sal
-(
-    22,
-    22,
-    'Xícaras',
-    FALSE,
-    FALSE,
-    1.25,
-    TRUE
-), -- água
---- Salada de frutas com leite de coco     (recipe_id: 23)
-(
-    86,
-    23,
-    'Xícara',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), --frutas
-(
-    56,
-    23,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), ----leite de coco  
-(
-    62,
-    23,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), ---- mel
--- Brigadeiro Sem Lactose
-(
-    186,
-    24,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-),
-(
-    130,
-    24,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    187,
-    24,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    188,
-    24,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Lasanha de Legumes Sem Lactose
-(
-    28,
-    25,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    57,
-    25,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    60,
-    25,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    77,
-    25,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    189,
-    25,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Bolo de Amêndoas
-(
-    108,
-    26,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    1,
-    26,
-    'Unidade',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-),
-(
-    127,
-    26,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    64,
-    26,
-    'Colher de Chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    144,
-    26,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Pão de Queijo
-(
-    110,
-    27,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    1,
-    27,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    3,
-    27,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    111,
-    27,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Macarrão de Arroz com Molho de Tomate
-(
-    118,
-    28,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    77,
-    28,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    17,
-    28,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    10,
-    28,
-    'Dente',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    190,
-    28,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Pizza com Massa de Couve-flor
-(
-    21,
-    29,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    111,
-    29,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    1,
-    29,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    12,
-    29,
-    'Colher de Chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Panquecas de Farinha de Arroz
-(
-    116,
-    30,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    1,
-    30,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    3,
-    30,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    62,
-    30,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Salada de Quinoa
-(
-    113,
-    31,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    123,
-    31,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    2,
-    31,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    190,
-    31,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    12,
-    31,
-    'Colher de Chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Sopa de Batata-doce
-(
-    114,
-    32,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    74,
-    32,
-    'Xícara',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-),
-(
-    17,
-    32,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    10,
-    32,
-    'Dente',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Cookies de Aveia sem Glúten
-(
-    105,
-    33,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    36,
-    33,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    127,
-    33,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    103,
-    33,
-    'Colher de Chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Arroz de Frutos do Mar
-(
-    9,
-    34,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    117,
-    34,
-    'Xícara',
-    FALSE,
-    FALSE,
-    500,
-    TRUE
-),
-(
-    190,
-    34,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    17,
-    34,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Tortas de Batata
-(
-    20,
-    35,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    17,
-    35,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    190,
-    35,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    1,
-    35,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Tortas de Batata
-(
-    20,
-    36,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    17,
-    36,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    190,
-    36,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    1,
-    36,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Muffins de Cenoura sem Glúten
-(
-    116,
-    37,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    16,
-    37,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    127,
-    37,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    64,
-    37,
-    'Colher de Chá',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Pasta de Grão-de-bico
-(
-    119,
-    38,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    120,
-    38,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    99,
-    38,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    10,
-    38,
-    'Dente',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Sushi com Alga Nori
-(
-    122,
-    39,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    121,
-    39,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    191,
-    39,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Pudim de Chia com Leite de Coco
-(
-    126,
-    40,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    56,
-    40,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    127,
-    40,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Salada de Frutas com Iogurte Sem Glúten
-(
-    40,
-    41,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    86,
-    41,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Curry de Frango sem Glúten
-(
-    80,
-    42,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    54,
-    42,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    56,
-    42,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    190,
-    42,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Bolinho de Chuva sem Glúten
-(
-    116,
-    43,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    62,
-    43,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    1,
-    43,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
---Creme de Abóbora
-(
-    94,
-    44,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
-(
-    74,
-    44,
-    'Xícara',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-),
-(
-    17,
-    44,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    10,
-    44,
-    'Dente',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Panqueca de Banana
-(
-    36,
-    45,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-),
-(
-    105,
-    45,
-    'Colher de Sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-),
---Lasanha de Berinjela
-(
-    57,
-    47,
-    'Unidade',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Lasanha de Berinjela: Berinjela--certo
-(
-    132,
-    47,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- Azeite---certo
-(
-    52,
-    47,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Molho de tomate--certo
-(
-    166,
-    47,
-    'Fatia',
-    FALSE,
-    FALSE,
-    10,
-    TRUE
-), -- Presunto--certo
-(
-    87,
-    47,
-    'Fatia',
-    FALSE,
-    FALSE,
-    15,
-    TRUE
-), -- Queijo----certo 
-(
-    167,
-    47,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    10,
-    TRUE
-), -- Catupiry--certo
-(
-    109,
-    48,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Curry de Grão de Bico: Óleo--certo
-(
-    17,
-    48,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Cebola
-(
-    81,
-    48,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Temperos (a gosto) 
-(
-    77,
-    48,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Pasta de tomate
-(
-    23,
-    48,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Pimentão
-(
-    59,
-    48,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Cenoura
-(
-    56,
-    48,
-    'ml',
-    FALSE,
-    FALSE,
-    400,
-    TRUE
-), -- Leite de coco
-(
-    22,
-    48,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Água
-(
-    19,
-    48,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Brócolis
-(
-    119,
-    48,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Grão de bico
-(
-    119,
-    49,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Falafel: Grão de bico
-(
-    17,
-    49,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Cebola
-(
-    10,
-    49,
-    'Dente',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Alho
-(
-    61,
-    49,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Coentro
-(
-    29,
-    49,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Salsinha
-(
-    4,
-    49,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- Farinha
-(
-    168,
-    49,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Bicarbonato de sódio
-(
-    109,
-    49,
-    'Litros',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Óleo (para fritar)
-(
-    10,
-    50,
-    'Dente',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- Sopa de Abóbora: Alho
-(
-    109,
-    50,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Óleo
-(
-    17,
-    50,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Cebola
-(
-    94,
-    50,
-    'Gramas',
-    FALSE,
-    FALSE,
-    800,
-    TRUE
-), -- Abóbora---certo
-(
-    20,
-    50,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Batata
-(
-    22,
-    50,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Água
-(
-    74,
-    50,
-    'Litros',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Caldo de legumes
-(
-    4,
-    51,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Quiche de Espinafre Light: Farinha
-(
-    11,
-    51,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-), -- Azeite
-(
-    12,
-    51,
-    'Colher de chá',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Sal
-(
-    90,
-    51,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Espinafre
-(
-    1,
-    51,
-    'Unidade',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- Ovos
-(
-    34,
-    51,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Creme de leite
---RISOSO DE COGUMELO
-(
-    89,
-    53,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Hambúrguer de Lentilha: Lentilha
-(
-    10,
-    53,
-    'Dente',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Alho
-(
-    17,
-    53,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Cebola
-(
-    81,
-    53,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Temperos (a gosto)
---HAMBURGUER DE LENTINHA
-(
-    10,
-    52,
-    'Dente',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Risoto de Cogumelo: Alho
-(
-    17,
-    52,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Cebola
-(
-    11,
-    52,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- Azeite
-(
-    134,
-    52,
-    'Gramas',
-    FALSE,
-    FALSE,
-    300,
-    TRUE
-), -- Cogumelos
-(
-    73,
-    52,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Vinho branco
-(
-    2,
-    52,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Tomate
-(
-    169,
-    52,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Salsão
-(
-    74,
-    52,
-    'Litros',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Caldo (de legumes ou carne)
-(
-    72,
-    52,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1.5,
-    TRUE
-), -- Arroz arbóreo---certo
-(
-    34,
-    52,
-    'Xícara',
-    FALSE,
-    FALSE,
-    1 / 4,
-    TRUE
-), -- Creme de leite
-(
-    43,
-    52,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Queijo parmesão
-(
-    14,
-    52,
-    'Colher',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Pimenta e sal
-(
-    2,
-    54,
-    'Unidade',
-    FALSE,
-    FALSE,
-    4,
-    TRUE
-), -- Pizza Margherita: Tomates
-(
-    17,
-    54,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Cebola
-(
-    10,
-    54,
-    'Dente',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Alho
-(
-    7,
-    54,
-    'Unidade',
-    FALSE,
-    FALSE,
-    3,
-    TRUE
-), -- Manjericão
-(
-    87,
-    54,
-    'Gramas',
-    FALSE,
-    FALSE,
-    200,
-    TRUE
-), -- Queijo (muçarela)
-(
-    109,
-    55,
-    'Colher de sopa',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Tacos de Feijão Preto: Óleo
-(
-    17,
-    55,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Cebola
-(
-    170,
-    55,
-    'Gramas',
-    FALSE,
-    FALSE,
-    250,
-    TRUE
-), -- Carne (opcional)
-(
-    24,
-    55,
-    'Unidade',
-    FALSE,
-    FALSE,
-    1,
-    TRUE
-), -- Pimentões
-(
-    171,
-    55,
-    'Xícara',
-    FALSE,
-    FALSE,
-    2,
-    TRUE
-), -- Feijão preto
-(
-    22,
-    55,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Água
-(
-    4,
-    55,
-    'Xícara',
-    FALSE,
-    FALSE,
-    0.5,
-    TRUE
-), -- Farinha (para engrossar)
+    -- Slada de tomate (recipe_id: 2)
+    (
+        2,
+        2,
+        'Unidade',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ), -- tomate
+    (
+        12,
+        2,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- sal
+    (
+        11,
+        2,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- azeite
+    (
+        7,
+        2,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1 / 4,
+        TRUE
+    ), -- manjericão
+    -- Bolo de nozes  (recipe_id: 3)
+    (
+        4,
+        3,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1.5,
+        TRUE
+    ), --farinha de trigo 
+    (
+        62,
+        3,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --açucar
+    (
+        5,
+        3,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- nozes picadas
+    (
+        64,
+        3,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), -- sopa de fermento em pó 
+    (
+        179,
+        3,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), -- óleo vegetal
+    (
+        131,
+        3,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), -- leite vegetal
+    -- Pão de forma   (recipe_id: 4)
+    (
+        4,
+        4,
+        'Xícara',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), --farinha de trigo 
+    (
+        64,
+        4,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --fermento 
+    (
+        62,
+        4,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- açúcar 
+    (
+        12,
+        4,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), -- sal 
+    (
+        22,
+        4,
+        'ml',
+        FALSE,
+        FALSE,
+        60,
+        TRUE
+    ), -- água vegetal 
+    (
+        179,
+        4,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- óleo vegetal
+    -- Panqueca    (recipe_id: 5)
+    (
+        4,
+        5,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --farinha de trigo 
+    (
+        131,
+        5,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --leite vegtal 
+    (
+        179,
+        5,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- oléo vegetal
+    (
+        64,
+        5,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- fermento
+    (
+        12,
+        5,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- sal
+    --Bolo de laranja sem lactose     (recipe_id: 6)
+    (
+        4,
+        6,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1.5,
+        TRUE
+    ), --farinha de trigo 
+    (
+        62,
+        6,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --açúcar
+    (
+        180,
+        6,
+        'Unidade',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- suco de laranja 
+    (
+        179,
+        6,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- óleo vegetal
+    (
+        64,
+        6,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- fermento me pó
+    --Panqueca de banana sem lactose     (recipe_id: 7)
+    (
+        36,
+        7,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --banana 
+    (
+        4,
+        7,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --farinha de trigo 
+    (
+        131,
+        7,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- leite vegetal 
+    (
+        64,
+        7,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- fermento em pó
+    -- Risoto de Cogumelos sem lactose    (recipe_id: 8)
+    (
+        72,
+        8,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --arroz arbóreo 
+    (
+        68,
+        8,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --cogumelos  
+    (
+        74,
+        8,
+        'Xícara',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ), -- caldo de legumes  
+    (
+        17,
+        8,
+        'Unidade',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- cebola
+    (
+        10,
+        8,
+        'Dente',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --alho 
+    (
+        11,
+        8,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), --azeite 
+    (
+        73,
+        8,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), -- vinho branco 
+    (
+        12,
+        8,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- sal
+    -- Pão de Queijo Vegano    (recipe_id: 9)
+    (
+        110,
+        9,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1.5,
+        TRUE
+    ), --polvilho doce
+    (
+        46,
+        9,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), --polvilho azedo 
+    (
+        20,
+        9,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- batata
+    (
+        12,
+        9,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- sal
+    (
+        179,
+        9,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), --oléo vegetal
+    -- Sorvete de Bnana e Cacau     (recipe_id: 10)
+    (
+        36,
+        10,
+        'Unidade',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ), --banana
+    (
+        130,
+        10,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), --cacau em po  
+    (
+        62,
+        10,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- açúcar
+    -- Torta de maça sem lactose   (recipe_id: 11)
+    (
+        4,
+        11,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1.5,
+        TRUE
+    ), --farinha de trigo 
+    (
+        62,
+        11,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --açúcar  
+    (
+        145,
+        11,
+        'Unidade',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- maçãs
+    (
+        103,
+        11,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- canela 
+    (
+        179,
+        11,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), --oléo vegetal
+    (
+        64,
+        11,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), --fermento em pó
+    -- Pudim de coco sem lactose (recipe_id: 12)
+    (
+        56,
+        12,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- leite de coco
+    (
+        62,
+        12,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- açúcar
+    (
+        163,
+        12,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- amido de milho
+    (
+        181,
+        12,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), -- coco ralado
+    -- Brownie sem lactose (recipe_id: 13)
+    (
+        4,
+        13,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- farinha de trigo
+    (
+        130,
+        13,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- cacau em pó
+    (
+        62,
+        13,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- açúcar
+    (
+        179,
+        13,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- óleo vegetal
+    (
+        64,
+        13,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- fermento em pó
+    (
+        165,
+        13,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- chocolate sem lactose
+    -- Pizza sem lactose (recipe_id: 14)
+    (
+        4,
+        14,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- farinha de trigo
+    (
+        64,
+        14,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- fermento
+    (
+        22,
+        14,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- água
+    (
+        12,
+        14,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- sal
+    (
+        77,
+        14,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- molho de tomate
+    (
+        81,
+        14,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- temperos
+    -- Iogurte de coco caseiro (recipe_id: 15)
+    (
+        56,
+        15,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- leite de coco
+    (
+        182,
+        15,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- chá de lactobacilos
+    (
+        127,
+        15,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- mel
+    -- Mousse de Chocolate sem lactose (recipe_id: 16)
+    (
+        165,
+        16,
+        'Gramas',
+        FALSE,
+        FALSE,
+        200,
+        TRUE
+    ), -- chocolate sem lactose
+    (
+        56,
+        16,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- leite de coco
+    (
+        62,
+        16,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- açúcar
+    -- Empadão de palmito sem lactose (recipe_id: 17)
+    (
+        4,
+        17,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- farinha de trigo
+    (
+        179,
+        17,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- óleo vegetal
+    (
+        84,
+        17,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- palmito
+    (
+        17,
+        17,
+        'Unidade',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- cebola
+    (
+        10,
+        17,
+        'Dente',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- alho
+    (
+        81,
+        17,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- temperos
+    (
+        22,
+        17,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.25,
+        TRUE
+    ), -- água
+    -- Leite condensado vegano (recipe_id: 18)
+    (
+        131,
+        18,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- leite vegetal
+    (
+        62,
+        18,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- açúcar
+    (
+        163,
+        18,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- amido de milho
+    -- Creme de abóbora sem lactose (recipe_id: 19)
+    (
+        94,
+        19,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- abóbora
+    (
+        17,
+        19,
+        'Unidade',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- cebola
+    (
+        10,
+        19,
+        'Dente',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- alho
+    (
+        74,
+        19,
+        'Xícaras',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- caldo de legumes
+    (
+        12,
+        19,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- sal
+    (
+        11,
+        19,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- azeite
+    -- Quiche de espinafre sem lactose (recipe_id: 20)
+    (
+        4,
+        20,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1.5,
+        TRUE
+    ), -- farinha de trigo
+    (
+        179,
+        20,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- óleo vegetal
+    (
+        90,
+        20,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- espinafre
+    (
+        17,
+        20,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- cebola
+    (
+        10,
+        20,
+        'Dente',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- alho
+    (
+        140,
+        20,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- tofu
+    -- Bolo de cenoura sem lactose (recipe_id: 21)
+    (
+        4,
+        21,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1.5,
+        TRUE
+    ), -- farinha de trigo
+    (
+        16,
+        21,
+        'Unidade',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- cenoura
+    (
+        62,
+        21,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- açúcar
+    (
+        179,
+        21,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- óleo vegetal
+    (
+        64,
+        21,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- fermento
+    -- Pão integral sem lactose (recipe_id: 22)
+    (
+        85,
+        22,
+        'Xícara',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- farinha integral
+    (
+        64,
+        22,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- fermento
+    (
+        62,
+        22,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- açúcar
+    (
+        12,
+        22,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- sal
+    (
+        22,
+        22,
+        'Xícaras',
+        FALSE,
+        FALSE,
+        1.25,
+        TRUE
+    ), -- água
+    --- Salada de frutas com leite de coco     (recipe_id: 23)
+    (
+        86,
+        23,
+        'Xícara',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), --frutas
+    (
+        56,
+        23,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), ----leite de coco  
+    (
+        62,
+        23,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), ---- mel
+    -- Brigadeiro Sem Lactose
+    (
+        186,
+        24,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ),
+    (
+        130,
+        24,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        187,
+        24,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        188,
+        24,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Lasanha de Legumes Sem Lactose
+    (
+        28,
+        25,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        57,
+        25,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        60,
+        25,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        77,
+        25,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        189,
+        25,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Bolo de Amêndoas
+    (
+        108,
+        26,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        1,
+        26,
+        'Unidade',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ),
+    (
+        127,
+        26,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        64,
+        26,
+        'Colher de Chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        144,
+        26,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Pão de Queijo
+    (
+        110,
+        27,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        1,
+        27,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        3,
+        27,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        111,
+        27,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Macarrão de Arroz com Molho de Tomate
+    (
+        118,
+        28,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        77,
+        28,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        17,
+        28,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        10,
+        28,
+        'Dente',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        190,
+        28,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Pizza com Massa de Couve-flor
+    (
+        21,
+        29,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        111,
+        29,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        1,
+        29,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        12,
+        29,
+        'Colher de Chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Panquecas de Farinha de Arroz
+    (
+        116,
+        30,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        1,
+        30,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        3,
+        30,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        62,
+        30,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Salada de Quinoa
+    (
+        113,
+        31,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        123,
+        31,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        2,
+        31,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        190,
+        31,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        12,
+        31,
+        'Colher de Chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Sopa de Batata-doce
+    (
+        114,
+        32,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        74,
+        32,
+        'Xícara',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ),
+    (
+        17,
+        32,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        10,
+        32,
+        'Dente',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Cookies de Aveia sem Glúten
+    (
+        105,
+        33,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        36,
+        33,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        127,
+        33,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        103,
+        33,
+        'Colher de Chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Arroz de Frutos do Mar
+    (
+        9,
+        34,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        117,
+        34,
+        'Xícara',
+        FALSE,
+        FALSE,
+        500,
+        TRUE
+    ),
+    (
+        190,
+        34,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        17,
+        34,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Tortas de Batata
+    (
+        20,
+        35,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        17,
+        35,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        190,
+        35,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        1,
+        35,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Tortas de Batata
+    (
+        20,
+        36,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        17,
+        36,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        190,
+        36,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        1,
+        36,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Muffins de Cenoura sem Glúten
+    (
+        116,
+        37,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        16,
+        37,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        127,
+        37,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        64,
+        37,
+        'Colher de Chá',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Pasta de Grão-de-bico
+    (
+        119,
+        38,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        120,
+        38,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        99,
+        38,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        10,
+        38,
+        'Dente',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Sushi com Alga Nori
+    (
+        122,
+        39,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        121,
+        39,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        191,
+        39,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Pudim de Chia com Leite de Coco
+    (
+        126,
+        40,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        56,
+        40,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        127,
+        40,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Salada de Frutas com Iogurte Sem Glúten
+    (
+        40,
+        41,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        86,
+        41,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Curry de Frango sem Glúten
+    (
+        80,
+        42,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        54,
+        42,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        56,
+        42,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        190,
+        42,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Bolinho de Chuva sem Glúten
+    (
+        116,
+        43,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        62,
+        43,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        1,
+        43,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    --Creme de Abóbora
+    (
+        94,
+        44,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    (
+        74,
+        44,
+        'Xícara',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ),
+    (
+        17,
+        44,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        10,
+        44,
+        'Dente',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Panqueca de Banana
+    (
+        36,
+        45,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ),
+    (
+        105,
+        45,
+        'Colher de Sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ),
+    --Lasanha de Berinjela
+    (
+        57,
+        47,
+        'Unidade',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Lasanha de Berinjela: Berinjela--certo
+    (
+        132,
+        47,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- Azeite---certo
+    (
+        52,
+        47,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Molho de tomate--certo
+    (
+        166,
+        47,
+        'Fatia',
+        FALSE,
+        FALSE,
+        10,
+        TRUE
+    ), -- Presunto--certo
+    (
+        87,
+        47,
+        'Fatia',
+        FALSE,
+        FALSE,
+        15,
+        TRUE
+    ), -- Queijo----certo 
+    (
+        167,
+        47,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        10,
+        TRUE
+    ), -- Catupiry--certo
+    (
+        109,
+        48,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Curry de Grão de Bico: Óleo--certo
+    (
+        17,
+        48,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Cebola
+    (
+        81,
+        48,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Temperos (a gosto) 
+    (
+        77,
+        48,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Pasta de tomate
+    (
+        23,
+        48,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Pimentão
+    (
+        59,
+        48,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Cenoura
+    (
+        56,
+        48,
+        'ml',
+        FALSE,
+        FALSE,
+        400,
+        TRUE
+    ), -- Leite de coco
+    (
+        22,
+        48,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Água
+    (
+        19,
+        48,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Brócolis
+    (
+        119,
+        48,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Grão de bico
+    (
+        119,
+        49,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Falafel: Grão de bico
+    (
+        17,
+        49,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Cebola
+    (
+        10,
+        49,
+        'Dente',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Alho
+    (
+        61,
+        49,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Coentro
+    (
+        29,
+        49,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Salsinha
+    (
+        4,
+        49,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- Farinha
+    (
+        168,
+        49,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Bicarbonato de sódio
+    (
+        109,
+        49,
+        'Litros',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Óleo (para fritar)
+    (
+        10,
+        50,
+        'Dente',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- Sopa de Abóbora: Alho
+    (
+        109,
+        50,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Óleo
+    (
+        17,
+        50,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Cebola
+    (
+        94,
+        50,
+        'Gramas',
+        FALSE,
+        FALSE,
+        800,
+        TRUE
+    ), -- Abóbora---certo
+    (
+        20,
+        50,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Batata
+    (
+        22,
+        50,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Água
+    (
+        74,
+        50,
+        'Litros',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Caldo de legumes
+    (
+        4,
+        51,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Quiche de Espinafre Light: Farinha
+    (
+        11,
+        51,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ), -- Azeite
+    (
+        12,
+        51,
+        'Colher de chá',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Sal
+    (
+        90,
+        51,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Espinafre
+    (
+        1,
+        51,
+        'Unidade',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- Ovos
+    (
+        34,
+        51,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Creme de leite
+    --RISOSO DE COGUMELO
+    (
+        89,
+        53,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Hambúrguer de Lentilha: Lentilha
+    (
+        10,
+        53,
+        'Dente',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Alho
+    (
+        17,
+        53,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Cebola
+    (
+        81,
+        53,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Temperos (a gosto)
+    --HAMBURGUER DE LENTINHA
+    (
+        10,
+        52,
+        'Dente',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Risoto de Cogumelo: Alho
+    (
+        17,
+        52,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Cebola
+    (
+        11,
+        52,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- Azeite
+    (
+        134,
+        52,
+        'Gramas',
+        FALSE,
+        FALSE,
+        300,
+        TRUE
+    ), -- Cogumelos
+    (
+        73,
+        52,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Vinho branco
+    (
+        2,
+        52,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Tomate
+    (
+        169,
+        52,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Salsão
+    (
+        74,
+        52,
+        'Litros',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Caldo (de legumes ou carne)
+    (
+        72,
+        52,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1.5,
+        TRUE
+    ), -- Arroz arbóreo---certo
+    (
+        34,
+        52,
+        'Xícara',
+        FALSE,
+        FALSE,
+        1 / 4,
+        TRUE
+    ), -- Creme de leite
+    (
+        43,
+        52,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Queijo parmesão
+    (
+        14,
+        52,
+        'Colher',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Pimenta e sal
+    (
+        2,
+        54,
+        'Unidade',
+        FALSE,
+        FALSE,
+        4,
+        TRUE
+    ), -- Pizza Margherita: Tomates
+    (
+        17,
+        54,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Cebola
+    (
+        10,
+        54,
+        'Dente',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Alho
+    (
+        7,
+        54,
+        'Unidade',
+        FALSE,
+        FALSE,
+        3,
+        TRUE
+    ), -- Manjericão
+    (
+        87,
+        54,
+        'Gramas',
+        FALSE,
+        FALSE,
+        200,
+        TRUE
+    ), -- Queijo (muçarela)
+    (
+        109,
+        55,
+        'Colher de sopa',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Tacos de Feijão Preto: Óleo
+    (
+        17,
+        55,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Cebola
+    (
+        170,
+        55,
+        'Gramas',
+        FALSE,
+        FALSE,
+        250,
+        TRUE
+    ), -- Carne (opcional)
+    (
+        24,
+        55,
+        'Unidade',
+        FALSE,
+        FALSE,
+        1,
+        TRUE
+    ), -- Pimentões
+    (
+        171,
+        55,
+        'Xícara',
+        FALSE,
+        FALSE,
+        2,
+        TRUE
+    ), -- Feijão preto
+    (
+        22,
+        55,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Água
+    (
+        4,
+        55,
+        'Xícara',
+        FALSE,
+        FALSE,
+        0.5,
+        TRUE
+    ), -- Farinha (para engrossar)
 
 (
     5,
@@ -11937,593 +11937,905 @@ SET
 WHERE
     id = 7;
 
-UPDATE recipe
+UPDATE restriction
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FarrozAGrega.jpg?alt=media&token=3b49e70d-4702-471a-9d4c-3c8d4840ee03'
-WHERE
-    id = 164;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FOmeleteQueijoErvas.jpg?alt=media&token=f100c056-6ca9-4269-b185-7695ef5d35bc'
-WHERE
-    id = 165;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Frecipe-de-canelone-de-ricota.jpg?alt=media&token=67852a25-f1ed-4a6c-8c92-d2a43a8139a4'
-WHERE
-    id = 166;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbatata-recheada-simples.jpeg?alt=media&token=dcb4afc0-f992-4599-9036-47137ed4d29b'
-WHERE
-    id = 167;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FSmoothie-de-frutas.jpg?alt=media&token=75672391-e55c-461f-94fb-ed56276af2fe'
-WHERE
-    id = 168;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fsalada-de-quinoa-simples.webp?alt=media&token=7746c441-44cd-4580-9d84-2d29ee39b4fc'
-WHERE
-    id = 169;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FEspaguete-alho-%C3%B3leo.webp?alt=media&token=a2951781-195a-4edd-a4cb-09147cd7a4c7'
-WHERE
-    id = 170;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FBolinho-batata.jpg?alt=media&token=85f1bdcf-4fb3-4c98-b851-b8f49c376cad'
-WHERE
-    id = 171;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FSalada-de-batata.png?alt=media&token=8ce3cdc5-9ee0-4481-a2c6-2434c503f6e6'
-WHERE
-    id = 172;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FP%C3%A3o-queijo.jpg?alt=media&token=a22a4080-bcd9-4de8-93ab-1c86df633afa'
-WHERE
-    id = 173;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FCurry-legumes.jpg?alt=media&token=ebc09012-b114-4559-9192-3e829efb3dcf'
-WHERE
-    id = 174;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fcuscuz-marroquino.jpg?alt=media&token=8db11a72-cdf8-4ed5-a357-34ceff8f683d'
-WHERE
-    id = 136;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FPao-integral-sem-lactose.jpg?alt=media&token=2f42d7c2-c757-4966-85ab-62fcc528add4'
-WHERE
-    id = 4;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ffalafel.jpg?alt=media&token=c7c8f030-2b87-4f79-91f2-c99ee7e58446'
-WHERE
-    id = 49;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpanqueca.jpg?alt=media&token=100033d5-c12e-4a48-b52c-100a6051cc3d'
-WHERE
-    id = 7;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FSushi-com-Peixe-e-Legumes.jpg?alt=media&token=4d5bf5db-4cb9-4020-adec-1b0fe1742f2c'
-WHERE
-    id = 154;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Frisoto-de-colgumelos.jpg?alt=media&token=c3f4de16-9b15-475d-836b-be9e9ae5ab39'
-WHERE
-    id = 105;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ffrutos-do-mar-com-alhor.jpg?alt=media&token=3ae60504-02dc-447f-8284-f9ee5d741c8a'
-WHERE
-    id = 68;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fquibe-de-abobora.webp?alt=media&token=679ad600-eb2e-48be-976f-2144d05cd1de'
-WHERE
-    id = 141;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fsushi-folha-alga-nori.webp?alt=media&token=03759f65-bc6d-4cf1-a4d6-2a6fabb7d362'
-WHERE
-    id = 39;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpasta-de-azeitona.jpg?alt=media&token=10cd225f-3eed-424b-8857-3ddd391cc163'
-WHERE
-    id = 135;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FBrownie-sem-lactose.jpg?alt=media&token=b8dfe5a5-e1e8-4db6-9ad4-4833430eec27'
-WHERE
-    id = 13;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fcanelone-espinafre-ricota.jpg?alt=media&token=6b98d934-356a-44c3-bfed-b97eb98b666a'
-WHERE
-    id = 127;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FBOLO-DE-BATATAjpg.jpg?alt=media&token=e0a0620d-385b-4d1c-b70e-c19b0436349d'
-WHERE
-    id = 113;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FMacarrao-de-abobrinha.jpg?alt=media&token=30bbaf9d-e67e-4ffa-976a-948aa5115d19'
-WHERE
-    id = 56;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fnhoque-de-batata-doce.jpg?alt=media&token=81b047ac-7b17-47dd-b97b-3904ad0fb39a'
-WHERE
-    id = 64;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FCreme-de-ab%C3%B3bora.jpg?alt=media&token=88e23848-8cb7-4859-95db-543ea8243cc5'
-WHERE
-    id = 87;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbolo-de-cenoura.jpg?alt=media&token=d02d6c51-ff86-4cd1-b092-c6c74ae201ec'
-WHERE
-    id = 143;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fquinoa.jpg?alt=media&token=4adbdcf2-0b37-452d-93ce-180275a46369'
-WHERE
-    id = 63;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Farroz-com-legumes.jpg?alt=media&token=67d7f2f8-3200-40af-bb1e-17ea264cd514'
-WHERE
-    id = 145;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ftorta-de-limao-sem-gluten.webp?alt=media&token=901dbfeb-899f-474c-a262-1a61e29d8fc8'
-WHERE
-    id = 155;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpanqueca.jpg?alt=media&token=100033d5-c12e-4a48-b52c-100a6051cc3d'
-WHERE
-    id = 5;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Frisoto-de-colgumelos.jpg?alt=media&token=c3f4de16-9b15-475d-836b-be9e9ae5ab39'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/restricoes%2FCate.jpg?alt=media&token=a5743499-98cc-49a0-9b17-7b60d6b53239'
 WHERE
     id = 8;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpasta-de-abacate.webp?alt=media&token=8cb497bd-15df-44fe-9c6a-64b6a0b2bac2'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsorvete-banana-cacau.webp?alt=media&token=137a9f35-91f1-4f52-8a0c-d83401392c8c'
 WHERE
-    id = 177;
+    id = 10;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FPizza-de-legumes.jpg?alt=media&token=116bb4ba-e706-4fda-9c3c-18ad364912d5'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpizza-margherita.avif?alt=media&token=16a022ba-8954-45c1-9a5f-8ffc1e8d1a68'
 WHERE
-    id = 178;
+    id = 54;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fceviche-de-mango.jpg?alt=media&token=32d905c2-5bc8-41ec-b62f-4038ba96eeea'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftacos-feijao-preto.jpg?alt=media&token=432ebf6c-b40a-4855-a895-480be8e461b3'
+WHERE
+    id = 55;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpudim-coco-lactose.jfif?alt=media&token=fcc4468c-d5d9-43c4-b0c0-2014441725bc'
+WHERE
+    id = 12;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpizza-sem-lactose.jfif?alt=media&token=9c9af7b3-ad41-4b01-8ef0-0b2f35a00fdc'
+WHERE
+    id = 14;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsopa-de-batata-doce.jpg?alt=media&token=68f119d2-97df-4882-a84a-5f1a1b34a438'
+WHERE
+    id = 32;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpudim-de-chia-com-frutas.webp?alt=media&token=6921e012-6857-4182-9d89-01d7bdf600a0'
+WHERE
+    id = 40;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FCreme-de-ab%C3%B3bora.jpg?alt=media&token=88e23848-8cb7-4859-95db-543ea8243cc5'
+WHERE
+    id = 44;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpasta-abobrinha.jfif?alt=media&token=414101be-2cad-44b5-a9cd-b4041c0769c3'
+WHERE
+    id = 111;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fcuscuz-marroquino.jpg?alt=media&token=8db11a72-cdf8-4ed5-a357-34ceff8f683d'
+WHERE
+    id = 112;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FCreme-de-ab%C3%B3bora.jpg?alt=media&token=88e23848-8cb7-4859-95db-543ea8243cc5'
+WHERE
+    id = 114;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FSalada-Caesar-frutos-do-mar.avif?alt=media&token=65bb7f7b-43bb-4c72-a94f-d23f086daad8'
+WHERE
+    id = 115;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsanduiche-de-frango.jpg?alt=media&token=085e3844-c316-4f5b-b35e-512c4d3c793b'
+WHERE
+    id = 116;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FMuffins-de-espinafre.jpg?alt=media&token=623daf9e-8103-4990-a55a-b42b65cb4c1b'
+WHERE
+    id = 117;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsopa-de-lentilha.webp?alt=media&token=2a59fed5-9648-448b-87eb-0c7924a3d075'
+WHERE
+    id = 139;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ffarofa-banana.jfif?alt=media&token=6f3de8b7-9b15-45bc-82f6-8dcf41b3d948'
+WHERE
+    id = 140;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Flasagna-legumes-sem-lactose.avif?alt=media&token=e85142df-95d0-49af-bd00-4f83ac6ad3ac'
+WHERE
+    id = 25;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fwrap-vegetais.jfif?alt=media&token=34b14c9f-3841-4abc-99a7-7b18881fe0d2'
+WHERE
+    id = 59;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fceviche-caju.jfif?alt=media&token=e7fbb524-05b6-46f5-9f04-4db68f14cd2d'
+WHERE
+    id = 61;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-frutas-iogurte-sem-gluten.jfif?alt=media&token=8cf00d70-5f59-4a12-a3c8-584b577f4df5'
+WHERE
+    id = 41;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FFrango-parmegiana.jpg?alt=media&token=23332f00-81c5-45d6-b4a3-89e3b122f721'
+WHERE
+    id = 106;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-de-quinoa-simples.webp?alt=media&token=7746c441-44cd-4580-9d84-2d29ee39b4fc'
+WHERE
+    id = 86;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolo-de-cenoura.jpg?alt=media&token=d02d6c51-ff86-4cd1-b092-c6c74ae201ec'
+WHERE
+    id = 21;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-frutas-leite-coco.jfif?alt=media&token=0b4dc9e7-3087-487d-9ded-a2269c24f286'
+WHERE
+    id = 23;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpizza-mariscos.jfif?alt=media&token=f2a39af6-3061-40b2-956f-ea75d4faa902'
+WHERE
+    id = 77;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Foasta-sardinha.webp?alt=media&token=7aab0f3c-67c1-42d2-bedb-bc442f50e915'
+WHERE
+    id = 78;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fcurry-peixe.webp?alt=media&token=b07208bd-6412-412c-ac1d-5ec0e8c68317'
+WHERE
+    id = 79;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpaella-frutos-mar.jfif?alt=media&token=6ad2b76b-6ee1-4836-b2e6-42702611039a'
+WHERE
+    id = 80;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fcamarao-moranga.jpg?alt=media&token=49f1bf77-9021-4c8c-993b-0643da8fbace'
+WHERE
+    id = 84;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Frisoto-camarao.jfif?alt=media&token=7ad0755d-6c55-4ffd-b1d8-d6ad65661da5'
+WHERE
+    id = 65;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsushu-salmao.webp?alt=media&token=fe60bd69-f297-4132-a183-465619247dc7'
+WHERE
+    id = 66;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fespaguete-molho-camarao.jfif?alt=media&token=43102a19-f706-4f6f-9771-03afefdb861e'
+WHERE
+    id = 71;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fceviche-peixe.jfif?alt=media&token=3fcecb86-28c3-400a-b433-6e4eaecbc2a0'
+WHERE
+    id = 72;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-de-quinoa-simples.webp?alt=media&token=7746c441-44cd-4580-9d84-2d29ee39b4fc'
+WHERE
+    id = 73;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsanduiche-peixe.jfif?alt=media&token=475367bb-3c72-49fb-93f0-07acd4404433'
+WHERE
+    id = 74;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsopa-abobora.jfif?alt=media&token=6eb8137d-6c3d-4eed-b645-8b7480e62efa'
+WHERE
+    id = 50;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fquiche-espinafre-light.jfif?alt=media&token=0b4a357d-3fc1-48bc-a2f6-b30dc013f13e'
+WHERE
+    id = 51;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Frisoto-de-colgumelos.jpg?alt=media&token=c3f4de16-9b15-475d-836b-be9e9ae5ab39'
+WHERE
+    id = 52;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fwrap-alface-hummus.webp?alt=media&token=81fbfa26-c024-44b9-98f2-a19733485c96'
+WHERE
+    id = 104;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolinho-chuva-sem-gluten.jpg?alt=media&token=adebbdcd-6f83-40ea-b21a-2df184d3198a'
+WHERE
+    id = 43;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-frutas.jpg?alt=media&token=1a53582c-40cf-4fcf-8231-814b4c133b95'
+WHERE
+    id = 156;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolo-de-amendas.jpg?alt=media&token=c7b581a8-b4c0-4cdd-b091-a8d2a2e9ca31'
+WHERE
+    id = 26;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Flasanha-abobrinha.jpg?alt=media&token=0c31c022-6abf-4805-9894-8fd580ab05ec'
+WHERE
+    id = 97;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpudim-leite-condensado.jpg?alt=media&token=a4853121-19f1-47f5-b07d-0b2b84d5c0dd'
+WHERE
+    id = 129;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftorta-de-limao-sem-gluten.webp?alt=media&token=901dbfeb-899f-474c-a262-1a61e29d8fc8'
+WHERE
+    id = 11;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fomelete-legumes.jfif?alt=media&token=311564b1-8f2d-4445-9823-e16d21ac76cb'
+WHERE
+    id = 62;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbrigadeiro-sem-lactose.avif?alt=media&token=e64cb716-2b66-4a9a-a205-6649265ec723'
+WHERE
+    id = 24;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftorta-de-batata.jpg?alt=media&token=9283e39c-888b-4a1a-9753-077fad16e0e0'
+WHERE
+    id = 36;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Flasanha-vegetariana.jpg?alt=media&token=c6fe3b38-7d53-4776-85ab-c63b4c038dc2'
+WHERE
+    id = 109;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolinho-chuva-sem-gluten.jpg?alt=media&token=adebbdcd-6f83-40ea-b21a-2df184d3198a'
+WHERE
+    id = 153;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Frisoto-de-limao-siciliano.jpg?alt=media&token=9825f2e4-b13e-4300-8ba4-3e55d3bbc065'
+WHERE
+    id = 157;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fcuscuz-legumes.jpg?alt=media&token=cff6bdeb-e31d-432e-b789-a35da5de9e0d'
+WHERE
+    id = 158;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fmuffins-frutas.jpg?alt=media&token=a9a53f87-d1d9-4008-b678-082e87198608'
+WHERE
+    id = 159;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fwraps-frango.webp?alt=media&token=4ff433b4-c94a-493b-8e35-a0d96a3c62ce'
+WHERE
+    id = 160;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftacos-frango.jpg?alt=media&token=df2a975c-0a4d-4a58-ab1a-be29e86b5f4e'
+WHERE
+    id = 161;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fcrumble-maca.jfif?alt=media&token=06c45aa5-cf0f-4afd-9b38-1cb1602ea0a6'
+WHERE
+    id = 162;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fceviche-frutas.jfif?alt=media&token=c0b10273-a9e6-40f8-878f-8261f6dc4a64'
+WHERE
+    id = 122;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Frisoto-abobora-queijo.jfif?alt=media&token=a5238e38-60dd-451c-afed-ba851a1726f9'
+WHERE
+    id = 125;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fchili-vegetariano.jpeg?alt=media&token=bd422766-d753-4b10-aa20-75c573ddd68b'
+WHERE
+    id = 126;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Flasanha-de-berinjela.avif?alt=media&token=93b24eb2-6384-4974-ab33-9199353e7daa'
+WHERE
+    id = 47;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbiscoito-de-aveia.jpg?alt=media&token=6617d3ac-e6a4-48b6-bdfa-bd82d1cc92c5'
+WHERE
+    id = 147;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpasta-grao-bico.jfif?alt=media&token=558aa90b-f559-40a1-b413-eeefc2aec9aa'
+WHERE
+    id = 142;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolo-nozes.webp?alt=media&token=83045d1f-b6af-4c78-8bf7-82330de0e804'
+WHERE
+    id = 3;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolo-de-peixe.jfif?alt=media&token=da09afb2-000f-4efa-ab6a-dc7e21feccea'
+WHERE
+    id = 81;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-frutos-do-mar.webp?alt=media&token=bd8563cb-cd9e-4700-8f58-db8c8f35e412'
+WHERE
+    id = 82;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ffile-peixe-grelhado.jpg?alt=media&token=10a732ea-b03e-451b-a4fc-6a38c5b3077e'
+WHERE
+    id = 83;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftapioca-queijo-coco.jfif?alt=media&token=cc2ca5ed-2f8a-4476-9b59-2a4c2d3cf574'
+WHERE
+    id = 138;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FP%C3%A3o-queijo.jpg?alt=media&token=a22a4080-bcd9-4de8-93ab-1c86df633afa'
+WHERE
+    id = 27;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fmacarrao-de-arroz-com-molho-de-tomate.avif?alt=media&token=8c94c3cd-9522-4402-b979-7af406377e90'
+WHERE
+    id = 28;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpizza-massa-couve-flor.webp?alt=media&token=830022a5-06ed-4789-b6af-c7bc98333f23'
+WHERE
+    id = 29;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftorta-de-batata.jpg?alt=media&token=9283e39c-888b-4a1a-9753-077fad16e0e0'
+WHERE
+    id = 35;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpasta-tomate-seco.jpg?alt=media&token=e06684ec-ae06-475f-b53b-cef890db7332'
+WHERE
+    id = 149;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FPizza-de-legumes.jpg?alt=media&token=116bb4ba-e706-4fda-9c3c-18ad364912d5'
+WHERE
+    id = 150;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fquiche-de-legumes.jpg?alt=media&token=13d8e081-7058-463f-8124-ffe0e2805152'
+WHERE
+    id = 151;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FPasta-com-molho-de-tomate.jpg?alt=media&token=eaa58e1e-9883-48fa-bde6-f2d2026af1d5'
+WHERE
+    id = 118;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpanqueca-de-batata.jpg?alt=media&token=35d77249-4917-453a-b4d3-e02cdb8ebb41'
+WHERE
+    id = 119;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Farroz-doce.webp?alt=media&token=9d1f09fb-59dd-4805-a814-a93d1a92e641'
+WHERE
+    id = 120;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fmuffin-banana.png?alt=media&token=c3add72c-2efd-4134-945b-51ce8065497b'
+WHERE
+    id = 124;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FCreme-de-ab%C3%B3bora.jpg?alt=media&token=88e23848-8cb7-4859-95db-543ea8243cc5'
+WHERE
+    id = 44;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fcuscuz-marroquino.jpg?alt=media&token=2f230038-e6b9-434f-a1b7-db0a8b61f10e'
+WHERE
+    id = 112;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FCreme-de-ab%C3%B3bora.jpg?alt=media&token=88e23848-8cb7-4859-95db-543ea8243cc5'
+WHERE
+    id = 114;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsopa-de-lentilha.webp?alt=media&token=2a59fed5-9648-448b-87eb-0c7924a3d075'
+WHERE
+    id = 139;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsopa-abobora.jfif?alt=media&token=6eb8137d-6c3d-4eed-b645-8b7480e62efa'
+WHERE
+    id = 50;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FP%C3%A3o-queijo.jpg?alt=media&token=a22a4080-bcd9-4de8-93ab-1c86df633afa'
+WHERE
+    id = 27;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fquiche-de-legumes.jpg?alt=media&token=95973405-8dfe-4dd8-9e6e-d0de43785792'
+WHERE
+    id = 151;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fomelete-legumes.jfif?alt=media&token=311564b1-8f2d-4445-9823-e16d21ac76cb'
+WHERE
+    id = 164;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Freceita-de-canelone-de-ricota.jpg?alt=media&token=67852a25-f1ed-4a6c-8c92-d2a43a8139a4'
+WHERE
+    id = 165;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbatata-recheada-simples.jpeg?alt=media&token=dcb4afc0-f992-4599-9036-47137ed4d29b'
+WHERE
+    id = 166;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FSmoothie-de-frutas.jpg?alt=media&token=75672391-e55c-461f-94fb-ed56276af2fe'
+WHERE
+    id = 167;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FEspaguete-alho-%C3%B3leo.webp?alt=media&token=a2951781-195a-4edd-a4cb-09147cd7a4c7'
+WHERE
+    id = 169;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FP%C3%A3o-queijo.jpg?alt=media&token=a22a4080-bcd9-4de8-93ab-1c86df633afa'
+WHERE
+    id = 172;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FCurry-legumes.jpg?alt=media&token=ebc09012-b114-4559-9192-3e829efb3dcf'
+WHERE
+    id = 173;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftorta-de-batata.jpg?alt=media&token=9283e39c-888b-4a1a-9753-077fad16e0e0'
+WHERE
+    id = 174;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FPao-integral-sem-lactose.jpg?alt=media&token=2f42d7c2-c757-4966-85ab-62fcc528add4'
+WHERE
+    id = 4;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ffalafel.jpg?alt=media&token=c7c8f030-2b87-4f79-91f2-c99ee7e58446'
+WHERE
+    id = 49;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FSushi-com-Peixe-e-Legumes.jpg?alt=media&token=4d5bf5db-4cb9-4020-adec-1b0fe1742f2c'
+WHERE
+    id = 154;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Frisoto-de-colgumelos.jpg?alt=media&token=c3f4de16-9b15-475d-836b-be9e9ae5ab39'
+WHERE
+    id = 105;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ffrutos-do-mar-com-alhor.jpg?alt=media&token=3ae60504-02dc-447f-8284-f9ee5d741c8a'
+WHERE
+    id = 68;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fquibe-de-abobora.webp?alt=media&token=679ad600-eb2e-48be-976f-2144d05cd1de'
+WHERE
+    id = 141;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsushi-folha-alga-nori.webp?alt=media&token=03759f65-bc6d-4cf1-a4d6-2a6fabb7d362'
+WHERE
+    id = 39;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpasta-de-azeitona.jpg?alt=media&token=10cd225f-3eed-424b-8857-3ddd391cc163'
+WHERE
+    id = 135;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FBrownie-sem-lactose.jpg?alt=media&token=b8dfe5a5-e1e8-4db6-9ad4-4833430eec27'
+WHERE
+    id = 13;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Freceita-de-canelone-de-ricota.jpg?alt=media&token=67852a25-f1ed-4a6c-8c92-d2a43a8139a4'
+WHERE
+    id = 127;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fnhoque-de-batata-doce.jpg?alt=media&token=81b047ac-7b17-47dd-b97b-3904ad0fb39a'
+WHERE
+    id = 64;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fquinoa.jpg?alt=media&token=9bd834d3-1667-4fbe-8688-b30512147b1c'
+WHERE
+    id = 63;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Farroz-com-legumes.jpg?alt=media&token=67d7f2f8-3200-40af-bb1e-17ea264cd514'
+WHERE
+    id = 145;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftorta-de-limao-sem-gluten.webp?alt=media&token=901dbfeb-899f-474c-a262-1a61e29d8fc8'
+WHERE
+    id = 155;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fceviche-de-mango.jpg?alt=media&token=37089c3d-7bf4-43be-950a-8771929f3d35'
 WHERE
     id = 94;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FHummus.jpg?alt=media&token=272e799c-4fcc-4b91-9b56-cf61073afb0e'
-WHERE
-    id = 144;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FSalada-Caesar-frutos-do-mar.avif?alt=media&token=65bb7f7b-43bb-4c72-a94f-d23f086daad8'
-WHERE
-    id = 67;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ftacos-de-peixe.jpg?alt=media&token=702785c3-c888-443a-9ebb-c725d682e6bc'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftacos-de-peixe.jpg?alt=media&token=702785c3-c888-443a-9ebb-c725d682e6bc'
 WHERE
     id = 69;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ftorta-de-batata.jpg?alt=media&token=9283e39c-888b-4a1a-9753-077fad16e0e0'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolo-cenoura-calda.jpg?alt=media&token=3e7a498b-2d4e-4ab1-952a-749963e62a15'
 WHERE
     id = 175;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbolo-de-cenoura.jpg?alt=media&token=d02d6c51-ff86-4cd1-b092-c6c74ae201ec'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpasta-de-abacate.webp?alt=media&token=66842413-d5d4-410f-8c1b-35536be29dfb'
 WHERE
     id = 176;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FP%C3%A3o-queijo.jpg?alt=media&token=a22a4080-bcd9-4de8-93ab-1c86df633afa'
-WHERE
-    id = 9;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbabaganoush.jpg?alt=media&token=c74bfff6-ed08-4307-8161-f7da2ce7540e'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbabaganoush.jpg?alt=media&token=c74bfff6-ed08-4307-8161-f7da2ce7540e'
 WHERE
     id = 89;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpanqueca.jpg?alt=media&token=100033d5-c12e-4a48-b52c-100a6051cc3d'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpanqueca.jpg?alt=media&token=8d46504e-3861-4d7e-8793-6d0ac0a8a61c'
 WHERE
     id = 45;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fsopa-de-lentilha.webp?alt=media&token=2a59fed5-9648-448b-87eb-0c7924a3d075'
-WHERE
-    id = 108;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbolo-de-chocolate-vegano.jpg?alt=media&token=5e97ef68-a292-4758-a220-6f496da88133'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolo-de-chocolate-vegano.jpg?alt=media&token=5e97ef68-a292-4758-a220-6f496da88133'
 WHERE
     id = 85;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FPanquecas-de-farinha-de-arroz.jpg?alt=media&token=9f166200-a4ef-43b9-a2d4-4cade40a5371'
-WHERE
-    id = 30;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbolo-de-iogurte-natural.webp?alt=media&token=b2d04561-db8b-47c7-ae99-4e94d445a0d1'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolo-de-iogurte-natural.webp?alt=media&token=b2d04561-db8b-47c7-ae99-4e94d445a0d1'
 WHERE
     id = 134;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FHamb%C3%BArguer-de-Lentilha.jpg?alt=media&token=8a9f4080-d575-4bc8-9407-4c52eba3d6d9'
-WHERE
-    id = 88;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fsopa-de-lentilha.webp?alt=media&token=2a59fed5-9648-448b-87eb-0c7924a3d075'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsopa-de-lentilha.webp?alt=media&token=2a59fed5-9648-448b-87eb-0c7924a3d075'
 WHERE
     id = 146;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbiscoito-de-polvilho.webp?alt=media&token=27424640-ec66-4c13-969f-20a18fca3728'
-WHERE
-    id = 46;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpudim-de-chia-com-frutas.webp?alt=media&token=6921e012-6857-4182-9d89-01d7bdf600a0'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsopa-de-lentilha.webp?alt=media&token=2a59fed5-9648-448b-87eb-0c7924a3d075'
 WHERE
     id = 108;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FPao-integral-sem-lactose.jpg?alt=media&token=2f42d7c2-c757-4966-85ab-62fcc528add4'
-WHERE
-    id = 22;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbolo-de-laranja-sem-lactose.webp?alt=media&token=b17be0d9-d3a7-41d2-89c1-991aab6e5427'
-WHERE
-    id = 6;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FMuffins-de-cenoura-sem-gl%C3%BAten.jpg?alt=media&token=4759a7bf-167c-452d-a4e9-705828418a07'
-WHERE
-    id = 37;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FMuffins-de-cenoura-sem-gl%C3%BAten.jpg?alt=media&token=4759a7bf-167c-452d-a4e9-705828418a07'
-WHERE
-    id = 96;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpanqueca.jpg?alt=media&token=8d46504e-3861-4d7e-8793-6d0ac0a8a61c'
-WHERE
-    id = 93;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fcookies-de-aveia.jpg?alt=media&token=474d3abb-3f13-4682-964a-da23423bea5a'
-WHERE
-    id = 33;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FCreme-de-ab%C3%B3bora.jpg?alt=media&token=88e23848-8cb7-4859-95db-543ea8243cc5'
-WHERE
-    id = 19;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fquiche-de-legumes.jpg?alt=media&token=13d8e081-7058-463f-8124-ffe0e2805152'
-WHERE
-    id = 20;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbatata-recheada-simples.jpeg?alt=media&token=dcb4afc0-f992-4599-9036-47137ed4d29b'
-WHERE
-    id = 57;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FHamb%C3%BArguer-de-Lentilha.jpg?alt=media&token=8a9f4080-d575-4bc8-9407-4c52eba3d6d9'
-WHERE
-    id = 53;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FPanquecas-de-farinha-de-arroz.jpg?alt=media&token=5dc36679-3930-40e5-b236-350b8c961046'
-WHERE
-    id = 152;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fquiche-de-legumes.jpg?alt=media&token=95973405-8dfe-4dd8-9e6e-d0de43785792'
-WHERE
-    id = 110;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbiscoito-de-aveia.jpg?alt=media&token=6617d3ac-e6a4-48b6-bdfa-bd82d1cc92c5'
-WHERE
-    id = 121;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Farroz-de-frutos-do-mar.jpg?alt=media&token=edbaf55c-2cba-4c05-8448-d1a16932f656'
-WHERE
-    id = 34;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fquinoa.jpg?alt=media&token=4adbdcf2-0b37-452d-93ce-180275a46369'
-where
-    id = 31;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FPizza-de-legumes.jpg?alt=media&token=116bb4ba-e706-4fda-9c3c-18ad364912d5'
-WHERE
-    id = 99;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FBolinho-batata.jpg?alt=media&token=85f1bdcf-4fb3-4c98-b851-b8f49c376cad'
-WHERE
-    id = 101;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ftaco-de-frango.jpg?alt=media&token=1e79afdb-547c-4b90-8398-9e24e2ec930e'
-where
-    id = 107;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FSalada-tomate.jpg?alt=media&token=8988b847-133b-4670-afa1-ce18dbdcd662'
-where
-    id = 2;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FSmoothie-Espinafre.jpg?alt=media&token=19486603-47e4-478b-bd7c-358fb38b7ddc'
-WHERE
-    id = 91;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FIorgute-cocowebp.webp?alt=media&token=6bcf4e35-8576-455e-be6c-0974a4e7de08'
-WHERE
-    id = 15;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fmousse-chocolate.webp?alt=media&token=117a3193-7816-494a-99ca-e10e20b7fc8a'
-WHERE
-    id = 16;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FCurry-bico.jpg?alt=media&token=d5c75b15-ae48-41fc-8c91-d2854e6b438a'
-WHERE
-    id = 48;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fcurry-frango.jpg?alt=media&token=ec6bd7cc-01f7-4091-9a31-dd4d9184b8d3'
-WHERE
-    id = 42;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fempatado-palmito.jpg?alt=media&token=a50cad74-e62e-4110-a8eb-5aa6a5d66169'
-WHERE
-    id = 17;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpasta-bico.jpg?alt=media&token=5afe0d0b-de1f-4d65-8a1c-59a87495d044'
-WHERE
-    id = 38;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fsalada-caprese.webp?alt=media&token=14654ae5-6642-4a9c-90a8-c3a1240eed0a'
-WHERE
-    id = 60;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fleite-condensado.avif?alt=media&token=31f19b63-bf55-414e-b5eb-64adf2c74017'
-WHERE
-    id = 18;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fratatouille.avif?alt=media&token=075b0a92-75ec-4ca4-9fcb-dd114f6817eb'
-WHERE
-    id = 58;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbolo-cenoura-calda.jpg?alt=media&token=3e7a498b-2d4e-4ab1-952a-749963e62a15'
-WHERE
-    id = 123;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ffile-de-frango-com-molho-de-laranja-rotated.webp?alt=media&token=273d6612-41c7-45d1-b2bb-3b580ee9e487'
-WHERE
-    id = 148;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fthumbnail.webp?alt=media&token=a9f55261-ef0b-4c90-a2ae-261183db2e60'
-WHERE
-    id = 95;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fcrepe-queijo.jpg?alt=media&token=8cb1d6d8-b0f2-4658-a7d0-0027b93ea32d'
-WHERE
-    id = 131;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fquinoa.jpg?alt=media&token=9bd834d3-1667-4fbe-8688-b30512147b1c'
-WHERE
-    id = 133;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2FPanqueca-espinafre.avif?alt=media&token=06b557cf-7992-4d58-afc5-753984edcbb5'
-WHERE
-    id = 130;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbolinho-peixe.jpg?alt=media&token=c244d120-8b2f-4507-b1db-03f806911747'
-WHERE
-    id = 75;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fcamarao.webp?alt=media&token=8ed6affd-36d1-48e3-86f5-5b8c288ed252'
-WHERE
-    id = 76;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fomelete.webp?alt=media&token=08777159-9ad1-4079-aa62-b3cffd216dfd'
-WHERE
-    id = 1;
-
-UPDATE recipe
-SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fbatata-gratinada.jpg?alt=media&token=a8655af8-bd6f-49a4-88a3-df89cc53bc1a'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbatata-gratinada.jpg?alt=media&token=a8655af8-bd6f-49a4-88a3-df89cc53bc1a'
 WHERE
     id = 137;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fsopa-peixe.avif?alt=media&token=4037394a-a50a-430f-9a50-590161e98777'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FMuffins-de-cenoura-sem-gl%C3%BAten.jpg?alt=media&token=4759a7bf-167c-452d-a4e9-705828418a07'
 WHERE
-    id = 70;
+    id = 96;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fsorvete-banana.webp?alt=media&token=9fd27ced-e8a4-462d-bfa9-856f17968b35'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FHamb%C3%BArguer-de-Lentilha.jpg?alt=media&token=8a9f4080-d575-4bc8-9407-4c52eba3d6d9'
+WHERE
+    id = 53;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fquiche-de-legumes.jpg?alt=media&token=95973405-8dfe-4dd8-9e6e-d0de43785792'
+WHERE
+    id = 110;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Farroz-de-frutos-do-mar.jpg?alt=media&token=edbaf55c-2cba-4c05-8448-d1a16932f656'
+WHERE
+    id = 34;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-de-quinoa-simples.webp?alt=media&token=7746c441-44cd-4580-9d84-2d29ee39b4fc'
+WHERE
+    id = 31;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FPizza-de-legumes.jpg?alt=media&token=116bb4ba-e706-4fda-9c3c-18ad364912d5'
+WHERE
+    id = 99;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftaco-de-frango.jpg?alt=media&token=1e79afdb-547c-4b90-8398-9e24e2ec930e'
+WHERE
+    id = 107;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FSalada-tomate.jpg?alt=media&token=8988b847-133b-4670-afa1-ce18dbdcd662'
+WHERE
+    id = 2;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FSmoothie-Espinafre.jpg?alt=media&token=19486603-47e4-478b-bd7c-358fb38b7ddc'
+WHERE
+    id = 91;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FIorgute-cocowebp.webp?alt=media&token=6bcf4e35-8576-455e-be6c-0974a4e7de08'
+WHERE
+    id = 15;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fmousse-chocolate.webp?alt=media&token=117a3193-7816-494a-99ca-e10e20b7fc8a'
+WHERE
+    id = 16;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FCurry-bico.jpg?alt=media&token=d5c75b15-ae48-41fc-8c91-d2854e6b438a'
+WHERE
+    id = 48;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fempatado-palmito.jpg?alt=media&token=a50cad74-e62e-4110-a8eb-5aa6a5d66169'
+WHERE
+    id = 17;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ffile-de-frango-com-molho-de-laranja-rotated.webp?alt=media&token=273d6612-41c7-45d1-b2bb-3b580ee9e487'
+WHERE
+    id = 148;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fcrepe-queijo.jpg?alt=media&token=8cb1d6d8-b0f2-4658-a7d0-0027b93ea32d'
+WHERE
+    id = 131;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fbolinho-peixe.jpg?alt=media&token=c244d120-8b2f-4507-b1db-03f806911747'
+WHERE
+    id = 75;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fcamarao.webp?alt=media&token=8ed6affd-36d1-48e3-86f5-5b8c288ed252'
+WHERE
+    id = 76;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fomelete.webp?alt=media&token=08777159-9ad1-4079-aa62-b3cffd216dfd'
+WHERE
+    id = 1;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FBOLO-DE-BATATAjpg.jpg?alt=media&token=e0a0620d-385b-4d1c-b70e-c19b0436349d'
+WHERE
+    id = 113;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-quinoa-salmao.jpg?alt=media&token=cc922cd7-5d00-42df-a51e-d3be8df689ab'
+WHERE
+    id = 168;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsalada-de-atum.webp?alt=media&token=9804e0fb-0eb8-46fc-a638-6e08cda87782'
+WHERE
+    id = 67;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsorvete-banana.webp?alt=media&token=9fd27ced-e8a4-462d-bfa9-856f17968b35'
 WHERE
     id = 100;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ftorta-de-legumes.webp?alt=media&token=028a3309-5084-4db2-a72c-31707e1efdd3'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftorta-de-legumes.webp?alt=media&token=028a3309-5084-4db2-a72c-31707e1efdd3'
 WHERE
     id = 128;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ftacos-colgumelos.jpg?alt=media&token=e44e2ab9-3b12-432a-a197-1768bd5bd2f8'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftacos-colgumelos.jpg?alt=media&token=e44e2ab9-3b12-432a-a197-1768bd5bd2f8'
 WHERE
     id = 92;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fchili.jpg?alt=media&token=5e4264ae-de1a-4954-ba7b-31cbe5c9c364'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fchili-vegetariano.jpeg?alt=media&token=bd422766-d753-4b10-aa20-75c573ddd68b'
 WHERE
     id = 98;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Ftorta-maca.jpg?alt=media&token=df7223b3-de32-4a4c-a16f-9ca35ba3424c'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Ftorta-maca.jpg?alt=media&token=df7223b3-de32-4a4c-a16f-9ca35ba3424c'
 WHERE
     id = 102;
 
 UPDATE recipe
 SET
-    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/recipes%2Fpasta-de-abacate.webp?alt=media&token=66842413-d5d4-410f-8c1b-35536be29dfb'
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpasta-de-abacate.webp?alt=media&token=66842413-d5d4-410f-8c1b-35536be29dfb'
 WHERE
     id = 132;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fleite-condensado-caseiro-768x512.webp?alt=media&token=959f2927-0209-425d-9d2a-a1209cd97143'
+WHERE
+    id = 18;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2FRatatouille_desktop_5ddfe5fdbf.jpg?alt=media&token=a983d80a-3ac5-4bc4-9703-0e5fb4830593'
+WHERE
+    id = 58;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fpasta-de-amendoim-caseira.webp?alt=media&token=0e1f387a-ecdf-4b4b-be8d-ed96904383e7'
+WHERE
+    id = 95;
+
+UPDATE recipe
+SET
+    image_url = 'https://firebasestorage.googleapis.com/v0/b/let-s-snack.appspot.com/o/receitas%2Fsopa-de-peixe.jpg?alt=media&token=e8f6c45a-b36a-4440-a167-8cf334128932'
+WHERE
+    id = 70;
 
 UPDATE recipe
 SET
